@@ -1,0 +1,1001 @@
+regex,nl
+\b((.*)([a-z]))&(.)\b,lines with words ending with a lower-case letter and character
+"((.){5,}).*([0-9]).*",lines with a character at least 5 times before a number
+((.)&([a-z])&([A-Za-z])).*(dog).*,"lines having a character, lower-case letter, and letter before string 'dog'"
+((.*)([A-Za-z])).*([AEIOUaeiou]).*,lines which are ending with a letter before a vowel
+(\b(dog)*\b)(.*),lines starting in words with zero or more of string 'dog'
+"(\b(dog)&(truck)&(ring)\b){3,}","lines with words having the string 'dog', the string 'truck', and the string 'ring', 3 times  or more"
+(\b.*[A-Z].*\b)+,lines with words and a capital letter
+\b~([0-9].*dog.*)\b,lines with words without a number before string 'dog'
+[A-Za-z].*[a-z].*,lines with a lower-case letter following any other letter
+(([AEIOUaeiou])&([0-9])&(dog)).*(.).*,"lines containing a vowel, a number, and the string ""dog"" followed by a character"
+(([A-Z])|(.)|(dog)).*(truck).*,"Items with 'dog', a character, or an upper case letter preceding 'truck'."
+~(\b.*dog.*\b),Lines with no words with 'dog'
+"([0-9]).*(([A-Z]){7,}).*","Lines with  number before a capital letter, seven or more times"
+(([0-9])|(dog)).*([A-Z]).*,Lines with a number or the string 'dog' before capital letter
+(\b[a-z]\b)+,lines with words and only 1 ore more lower-case letter
+(dog.*truck.*)|(([A-Z]).*(.).*),lines containing the string 'dog' followed by the string 'truck' or a capital letter preceding a character
+(.*([AEIOUaeiou])&([A-Za-z]).*)+,lines which are containing a vowel and a letter at least once
+(([a-z])(.*))&((.*)(dog)),lines starting with a lower-case letter and ending with string 'dog'
+(([0-9])&([A-Z])&(dog)).*(truck).*,"lines having a number, a capital letter,string 'dog' and 'truck'"
+\b([a-z])*\b,lines with words and only zero or more lower-case letters
+([a-z].*[A-Z].*).*(dog).*,lines containing the string 'dog' preceded by a capital letter which is preceded by a lower-case letter
+~(([0-9].*..*)&(dog)),lines that do not contain a number followed by a character and do not contain the string 'dog'
+(dog).*([0-9].*..*).*,lines with the string 'dog' before a number with a character after
+([0-9].*[A-Z].*)&((dog)+),lines with a number before a capital letter and string 'dog'
+\b(.)*\b,"lines with words, a character, zero"
+(dog).*((truck)&([0-9])&([A-Za-z])).*,"lines that have the word ""dog"" followed by the word ""truck"", as well as a number and a letter"
+([AEIOUaeiou].*[a-z].*)(.*),Items beginning with a vowel preceding a small letter.
+([0-9]).*(([A-Za-z])|(dog)).*,lines containing a number followed by a letter or the string 'dog'
+(.).*([A-Z].*[0-9].*).*,lines with a character coming before a capital letter followed by a number
+(([AEIOUaeiou])|([0-9]))(.*),lines beginning with a vowel or a number
+([a-z]).*(([0-9])&(.)&(dog)).*,"lines with lower-case letter before number, character, and string 'dog'"
+(([0-9])|([A-Za-z])|(dog)).*([AEIOUaeiou]).*,"lines which have a vowel, and one of the following before the vowel: the string 'dog', a number, or a letter"
+"((.){5,}).*(dog).*",lines containing at least 5 characters before 'dog'
+"\b([A-Z].*[a-z].*){6,}\b",lines with words with a capital letter followed by a lower-case letter at least 6 times
+"\b((dog){6,})&(truck)\b",lines with words having the string 'dog' at least 6 times with the string 'truck'
+"(([a-z]){4,})&((dog)|(truck))",lines with 4 or more of a lower-case letter with string 'dog' or 'truck'
+"(\b~([AEIOUaeiou])\b){7,}",lines with 7 or more words without a vowel
+([AEIOUaeiou].*[a-z].*)*,lines with no or multiple vowels followed by a lower-case letter
+"([0-9].*dog.*){7,}",lines with a number followed by 7 or more strings of 'dog'
+([A-Z].*dog.*).*([A-Za-z]).*,Items with an uppercase letter preceding 'dog' preceding a letter.
+(([0-9])|([A-Z])|(dog)).*([a-z]).*,"lines containing a lower-case letter after a number, capital, or 'dog'"
+((.*)(dog)).*([A-Z]).*,lines ending with a capital letter after the string 'dog'
+"((dog){7,}).*(.*[AEIOUaeiou].*).*","lines with string 'dog', 7 or more times before containing vowel"
+.*(.)|([A-Za-z])|([AEIOUaeiou]).*,Lines with either a character or vowel or a letter
+((dog)*)|((.*)([A-Z])),"lines with string 'dog', zero or more times or ending with capital letter"
+.*([A-Za-z])|([0-9])|(dog).*,"lines containing either a letter, number, or string 'dog'"
+((.*[AEIOUaeiou].*)|([0-9]))*,lines that may or may not contain a vowel or a number
+(([A-Za-z])|([0-9])).*([A-Z]).*,lines containing a letter or a number and a capital letter
+\b((dog)&([a-z]))|(truck)\b,lines with words and the the string 'dog' and lower-case letter or the string 'truck'
+((([a-z])|(dog))(.*))*,lines that begin with a lower-case letter or the string 'dog'
+.*~(.).*,lines without only a character
+((dog)*)|(.*[AEIOUaeiou].*),lines with the string 'dog'  or containing a vowel
+"((.*)(dog)){7,}",lines that end with only the string 'dog' 7 or more times
+(([A-Za-z])|([A-Z]))*,lines that have a capital letter or a letter zero or more times
+(([AEIOUaeiou])&([a-z])&([A-Za-z])).*([A-Z]).*,Items with any letter preceding an uppe case letter.
+.*([0-9])&([AEIOUaeiou])&(dog).*,"Lines having a number, a vowel, and the string 'dog'"
+((dog)|([0-9])|([A-Z])).*(truck).*,"lines that have the word 'dog', a capital letter, or a number preceding the word 'truck'"
+((dog)(.*)).*(([AEIOUaeiou])+).*,lines starting with string 'dog' before vowel at least once
+(.*([AEIOUaeiou])|(dog).*)*,lines containing a vowel string 'dog' zero or more times
+.*\b(dog).*([a-z]).*\b.*,lines containing words with the string 'dog' before a lower-case letter in them
+"((dog){3,}).*(([0-9])|([A-Z])).*",lines with 3 or more of string 'dog' before a capital letter or number
+~(([AEIOUaeiou])&(.)&([0-9])),"lines without a vowel, a character, or a number"
+(([A-Za-z])|([0-9]))+,Lines with a letter or number.
+(([AEIOUaeiou])&([A-Z])&([0-9])).*(dog).*,"lines that have a capital letter, a number, and a vowel before the string 'dog'"
+.*([0-9])&([AEIOUaeiou])&([A-Za-z]).*,"lines containing number, vowel and a letter"
+((dog)*)|((truck)&(ring)&(lake)),"lines with the string 'dog' , string 'truck', string 'ring' and the string 'lake' zero or more times"
+~(([a-z])|((dog).*([A-Z]).*)),lines not having a lower-case 'dog'
+(((dog).*(truck).*)|(.))(.*),lines with the string 'dog' before 'truck' or a character
+~((dog)&(([A-Za-z])(.*))),lines which are not having the string 'dog' and not starting with a letter
+\b(.*)(.*dog.*)\b,lines with words and ending in string 'dog'
+(dog).*((truck)|([0-9])).*,lines with the string 'dog' before 'truck' or a number
+[0-9].*dog.*,Items with a numeral preceding 'dog'.
+"(dog.*[a-z].*){7,}",lines with the string 'dog' followed by a lower-case letter seven or more times
+(.*[A-Za-z].*).*((.*)([AEIOUaeiou])).*,lines ending with a vowel before a letter
+"(.*)((dog){6,})",Items terminating with 'dog' at least six times.
+(([AEIOUaeiou])&(dog)).*([A-Z]).*,Lines with vowel and string 'dog' before a capital letter
+(([A-Za-z])|([A-Z]))(.*),lines stating with a letter
+([AEIOUaeiou]).*((.)&(dog)&([A-Za-z])).*,"lines that have a vowel coming before a 'dog' string, a letter, and a character"
+(([a-z])&(dog)).*([0-9]).*,lines with a lower-case letter and 'dog' before a number
+\b((dog)+).*([AEIOUaeiou]).*\b,lines with words and the string 'dog'
+((.*)(dog)).*([a-z]).*,lines ending with string 'dog' before lower-case letter
+"(dog).*(([A-Za-z]){2,}).*","lines with string 'dog' before letter, 2 or more times"
+"(.*)(((dog)|(.)){7,})",lines ending with the string 'dog' or a character at least 7 times
+\b(dog)&([A-Z])&(truck)\b,"lines with words with the string 'dog', a capital letter, and the string 'truck' in them"
+(~([0-9])).*((dog)&(truck)).*,lines without a number followed by the string 'dog' and the string 'truck'
+~((dog)|(.*..*)),lines without the string 'dog' or a character
+~((dog)&([A-Za-z])),lines without 'dog' or letters
+"(..*dog.*){3,}",lines that have a character followed by 'dog' 3 or more times
+([0-9]).*(([A-Z])|([AEIOUaeiou])).*,lines with a number followed by a capital or a vowel
+"(dog).*(([a-z]){2,}).*","lines containing the string ""dog"" 2 or more times before a lower-case letter"
+(.*)((dog)|([a-z])),lines finishing with the string 'dog' or a lower-case letter
+(.*)((dog)|([a-z])),The lines that end with either the string 'dong' or a lower-case letter
+([AEIOUaeiou]).*((dog)|(.)|([0-9])).*,"lines with the string 'dog', a character, or a number after a vowel"
+(([AEIOUaeiou])&([0-9])).*(dog).*,lines that have both a vowel and a number occur before the string 'dog'
+(dog).*([A-Z].*[AEIOUaeiou].*).*,lines that have the string 'dog' before a capital letter followed by a vowel
+.*~((dog)+).*,lines not containing string 'dog' at least once
+((.)|(dog)).*(([a-z])+).*,lines with a character or the string 'dog' before a lower-case letter
+((dog)+)&(([A-Z])|(truck)),lines with the string 'dog' and capital letter or string 'truck'
+((.*)(.))|(.*[A-Z].*),lines ending in a character or having a capital letter
+((.*)(([a-z])+)).*(dog).*,lines ending with a lower-case letter before 'dog'
+(\b([a-z])*\b)(.*),lines that start with word that does or doesn't have at least one lower-case letter
+.*([AEIOUaeiou])|([A-Za-z])|([a-z]).*,"lines that contain a vowel, a letter, or a lower-case letter"
+(~(dog))&(([AEIOUaeiou])*),lines without zero or more of the string 'dog' and vowel
+(([A-Za-z])&([A-Z])&(dog)).*([a-z]).*,lines with a capital letter and string 'dog' before lower-case letter
+~(([a-z])*),lines that do not include a lower-case letter
+([0-9]).*([A-Z]).*,lines containing a number followed by a capital letter
+.*([0-9])|(.)|([a-z]).*,"lines that contain a number, a character, or a lower-case letter"
+((.)&(dog)&([0-9])).*([A-Z]).*,"Lines with a character, string 'dog', and a number before a capital"
+~((dog).*(truck).*),Items without 'dog' preceding 'truck'.
+\b(dog.*truck.*)|([AEIOUaeiou])\b,"The lines containing words, plus the string 'dog' followed by either the string 'truck' or a vowel"
+"(([A-Za-z]){4,}).*([AEIOUaeiou]).*","lines with a letter, 4 or more times before a vowel in them"
+(\b(dog)|(truck)\b).*([AEIOUaeiou]).*,Lines with words and the string 'dog' or 'truck' before a vowel
+"(.*)((([AEIOUaeiou])|([A-Z])){4,})","lines ending with vowel or capital letter, 4 or more times"
+(.*)(\b(dog)&(truck)&([A-Z])\b),"lines which are ending with words with the string 'dog', the string 'truck', and a capital letter"
+.*\b[A-Za-z].*dog.*\b.*,lines containing words with letter followed by string 'dog'
+((.*)([AEIOUaeiou]))&(dog.*truck.*),lines ending in vowel with string 'dog' before 'truck'
+(.*)(\b([A-Z])|(.)\b),lines ending in words with a capital letter or character
+~(((dog)(.*))&([AEIOUaeiou])),lines not beginning with the string 'dog' as well as a vowel
+(.*[a-z].*)&((dog)(.*)),lines with a lower-case letter starting in string 'dog'
+(((dog)*)|([A-Z]))(.*),The string 'dog' or a capital letter appears in the beginning of the lines
+.*([a-z])&([AEIOUaeiou])&(dog).*,"lines that contain the string ""dog"", along with a lower-case letter and vowel"
+([A-Za-z]).*((dog)&(.)).*,lines which contain a letter before the string 'dog' and a character
+(([A-Za-z])&([AEIOUaeiou])&(dog)).*(.).*,"lines with a character after a letter, a vowel, and the string 'dog'"
+([a-z].*dog.*).*([A-Z]).*,lines with a lower-case letter before the string 'dog' then a capital letter
+(([a-z])&(dog)).*(truck).*,"The lines that contain a lower-case letter and also the string 'dog', followed by the string 'truck'"
+\b([A-Z])&(.)\b,lines with words with a capital letter and a character in it
+~(([A-Za-z])&(dog)&([A-Z])),lines without a letter or the string 'dog'
+~(([a-z])|(([AEIOUaeiou])*)),lines that do not have a lower-case letter or a vowel at least zero times
+"((.*dog.*)|(.)){3,}",lines containing the string 'dog' or 3 or more characters
+((.)&([a-z])&([A-Za-z])).*([AEIOUaeiou]).*,"lines having a character, lower-case letter, and letter before a vowel"
+"((dog){3,})|(([0-9])(.*))",lines with 3 or more or the string 'dog' before a number
+\b([AEIOUaeiou])|([0-9])|(dog)\b,"lines with words and a vowel, number, or string 'dog'"
+"~((dog.*[0-9].*){3,})","lines that do not contain the string 'dog' followed by a number, three times or more"
+((dog)|([A-Z])|([0-9])).*([A-Za-z]).*,"lines with the string 'dog', letter, or number before a letter"
+\b(dog)|(..*[A-Za-z].*)\b,lines with words with string 'dog' or character before letter
+(.*[AEIOUaeiou].*[A-Z].*.*)+,lines with a vowel before capital letter
+~(([A-Za-z])|([0-9])|(.)),"lines without a letter, number, or character"
+~(([a-z])&(.)),lines  having no lower-case letter and character
+([0-9]).*(([AEIOUaeiou])|([a-z])|([A-Za-z])).*,"lines where vowel, letters, and lower-case letters come after a number"
+\b([A-Za-z])|([AEIOUaeiou])|(dog)\b,"lines with words that contain a letter, a vowel, or 'dog'"
+([A-Za-z]).*((.)&([0-9])&(dog)).*,"lines with a character, a number, and the string 'dog' after a letter"
+((dog)&(truck)&([A-Za-z])).*([a-z]).*,"lines containing a lower-case letter after the string 'dog', the string 'truck', and a letter"
+(dog).*(([A-Z])|(.)|(truck)).*,"lines with the string 'dog' before either a capital letter, a character, or the string 'truck' in them"
+"(([a-z]){6,})|((dog)&(.))","lines with a lower-case letter, 6 or more times or the string 'dog' and a character in them"
+\b(dog)|([A-Z])|([AEIOUaeiou])\b,"lines with words with either string 'dog', a capital, or  vowel"
+\b([a-z])&([AEIOUaeiou])&([0-9])\b,"lines with words and a lower-case letter, vowel, and number"
+(([A-Z])+)&((.*)([0-9])),ines with a capital letter at least once and which are ending with a number
+\b((dog).*([AEIOUaeiou]).*)|(.)\b,lines with words having the string 'dog' before a vowel or a character
+"~((([A-Z])(.*)){7,})","lines that do not start with a capital letter, at least 7 or more times"
+((..*[a-z].*)*)(.*),lines starting in zero or more of a character before a lower-case letter
+\b(([A-Za-z])|([A-Z])|(dog))|(truck)\b,"lines containing words having either a letter, a capital letter, or the string 'dog' or the string 'truck'"
+(([A-Za-z])|(.)).*(dog).*,lines with a letter or character before string 'dog'
+\b[A-Z].*[AEIOUaeiou].*\b,lines with capitalized words followed by a vowel
+"((dog){6,}).*([A-Za-z]).*",lines with a letter preceded by the string 'dog' 6 or more times
+(([0-9])|(dog)).*(.).*,Items with a numeral or 'dog' preceding a character.
+(([A-Z])+)|(([AEIOUaeiou])(.*)),lines with a capital letter and stating with a vowel
+.*([AEIOUaeiou])&(.).*,lines that have a vowel and a character
+\b([A-Za-z])|([0-9])|(.)\b,"lines with words and either a letter, number, or character"
+(([a-z])&([0-9])).*(dog).*,Lines with lower case letter and number before the string 'dog'.
+~((.*)(.*dog.*)),lines without 'dog' as a ending string
+"(([A-Za-z].*dog.*)(.*)){5,}","lines starting with letter followed by string 'dog', 5 or more times"
+((.*dog.*)+).*(truck).*,lines containing string 'dog' at least once before string 'truck'
+((.*)([A-Za-z]))&(([AEIOUaeiou])(.*)),lines ending in a letter starting with vowelo
+.*([AEIOUaeiou])|([0-9])|(.).*,"lines which contain a vowel, number or character`"
+.*([A-Z].*[AEIOUaeiou].*).*(dog).*.*,lines with a capital letter before a vowel then string 'dog'
+(((dog).*([a-z]).*)|([A-Z]))*,"lines that contain the string 'dog' followed by a lower-case letter or a capital letter, zero times or more"
+~((dog)|([A-Za-z])|([A-Z])),lines without the string 'dog' or a letter
+((dog)|(.)).*((.*)([a-z])).*,lines with the string 'dog' or character ending in lower-case letter
+~(.*[0-9].*),lines without any numbers
+((dog)|([a-z])).*([A-Z]).*,Items with 'dog' or a small letter preceding an upper case letter.
+".*(dog){3,}.*",lines with 3 or more strings of 'dog'
+(([0-9])|([a-z]))+,lines with a number or a lower-case letter at least once in it
+(~([0-9]))&(([A-Za-z])+),lines which are not having a number and a letter at least once
+.*([AEIOUaeiou])|([a-z])|(dog).*,"lines containing either a vowel, a lower-case letter, or the string 'dog' in them"
+.*(dog)&(.)&([0-9]).*,"lines with the string 'dog', character, and number"
+([A-Za-z]).*(([AEIOUaeiou])|(dog)).*,lines with a letter before vowel or string 'dog'
+(\b(dog)&([a-z])&([AEIOUaeiou])\b)+,"lines with words with string 'dog', lower-case letter, and vowel"
+(([A-Z])|([A-Za-z]))*,lines containing a capital letter or a letter at least zero times
+((dog)&([0-9])&([a-z])).*(truck).*,"lines containing string like 'dog', a number, a small letter before 'truck'"
+(dog).*(.*[A-Za-z].*).*,"lines containing the string ""dog"" followed by a letter"
+([A-Za-z].*dog.*).*([a-z]).*,lines with 'dog' before lower-case letters
+((dog)+).*((truck)&([AEIOUaeiou])).*,"lines containing the string 'dog' at least once, and followed by the string 'truck' and a vowel"
+([0-9]).*(([AEIOUaeiou])|([a-z])|(dog)).*,"lines containing a number before either a vowel, a lower-case letter, or the string 'dog'"
+"((dog)|(truck)){3,}",lines with the string 'dog' or 3 or more of the string 'truck'
+([AEIOUaeiou]).*(([0-9])|([a-z])).*,lines with a vowel before number or lower-case letter
+([A-Za-z]).*((dog)&([AEIOUaeiou])).*,lines with letter before string 'dog' and vowel
+(.*)(.*([A-Z])&([a-z]).*),lines which are ending with containing a capital letter and a lower-case letter
+\b((dog)|([A-Za-z]))+\b,lines with words with string 'dog' or letter at least once
+"~((dog){4,})",lines with only less than 3 of the string 'dog'
+([0-9]).*(([A-Z])&(dog)&([A-Za-z])).*,"lines with a number, a capital letter, the string 'dog', and a letter"
+"(~(dog))|(([a-z]){6,})","ines not having the string 'dog' or a lower-case letter, 6 or more times"
+(.*[AEIOUaeiou].*)&((dog)|([A-Z])),lines with a vowel as well as the string 'dog' or a capital letter
+(~(dog))|((truck).*([AEIOUaeiou]).*),lines without the string 'dog' or 'truck' before a vowel
+~([a-z].*..*),lines without a lower-case letter followed by a character
+"([a-z]).*(([A-Z]){3,}).*",lines that contain a lower-case letter followed by 3 or more capital letters
+([A-Z]).*(([0-9])&(dog)&([AEIOUaeiou])).*,"Items with an upper case letter preceding a numeral, a vowel, and 'dog'."
+"([0-9].*[A-Za-z].*){5,}",Items with a numeral preceding a letter at least five times.
+(~(.)).*([A-Za-z]).*,lines without a character before a letter
+~(([A-Za-z])|(dog)|(truck)),"Lines not having letter, the string 'dog', or the string 'truck'"
+.*dog.*[0-9].*.*,Lines containing string 'dog' followed by number
+(([A-Z])*)|((.*)([a-z])),lines with zero or more capital letters or ending with a lower-case letter
+~(([a-z].*[A-Za-z].*)+),lines not having lower-case letter followed by letter at least once
+((dog)&([A-Za-z])).*(truck.*[a-z].*).*,"lines with the string 'dog','truck'   and a letter followed by a lower-case letter"
+\b((dog)|(.)).*(truck).*\b,"lines with the string 'dog' or a character, before the string 'truck'"
+\b([0-9])|([A-Za-z])|([AEIOUaeiou])\b,lines with words and containing a number
+(([A-Za-z])|(dog))(.*),lines which are starting with a letter or the string 'dog'
+\b(.*)((dog)|([0-9]))\b,lines that end with the string 'dog' or a number
+(([A-Z])|([AEIOUaeiou])).*([A-Za-z]).*,lines that have a letter after a capital letter or vowel
+((dog)+)|(~(truck)),lines with the string 'dog' at least once not being the string 'truck'
+([0-9].*dog.*)(.*),"lines containing the word ""dog"" with a number preceding it"
+([A-Z])(.*),Lines that begin with a capitalized letter.
+~(([a-z])|([A-Za-z])|([A-Z])),lines without a letter
+(([A-Za-z])&([A-Z])).*([a-z]).*,lines with a lower-case letter after a letter and a capital letter
+([A-Za-z].*[a-z].*)(.*),lines stating with a letter before a lower-case letter
+([a-z]).*((dog)&([A-Z])).*,lines that have a lower-case letter preceding the word 'dog' and a capital letter
+(\b(.)|(dog)\b).*([A-Z]).*,lines with words and a character or string 'dog' before a capital letter
+(([A-Za-z])*)|((dog).*(truck).*),"lines with a letter, zero or more times or  string 'dog' before string 'truck'"
+~((dog.*[a-z].*).*(truck).*),lines not having string 'dog' followed by lower-case letter before string 'truck'
+((dog).*(.).*)&(([A-Za-z])(.*)),lines with the string 'dog' before character and starting in letter
+([AEIOUaeiou].*[a-z].*).*([0-9]).*,lines with a vowel before lower-case letter before number
+([0-9].*dog.*).*(([a-z])&([AEIOUaeiou])).*,lines with number followed by string 'dog' before lower-case letter and vowel
+\b(.*)([AEIOUaeiou].*[a-z].*)\b,Lines containing words  ending a with vowel followed by a lower case letter
+(([a-z])+).*(~(dog)).*,lines with a lower-case letter before non string 'dog'
+(dog).*(\b(.*)(truck)\b).*,lines with the string 'dog' before words ending in string 'truck'
+"(([0-9])(.*)){6,}","Items with a numeral, at least six times."
+"((dog){2,}).*([a-z]).*",lines that contain the string 'dog' and more than two times preceding lower-case letters.
+"([a-z].*dog.*){5,}",Items with a small letter preceding 'dog' at least five times.
+((.*)(dog))&(~(truck)),lines end with the string 'dog' but not 'truck'
+~((dog).*([a-z]).*),lines without an occurrence of a lower-case letter following a 'dog' string
+.*([a-z])|([A-Za-z])|([A-Z]).*,"lines with any letter, lower-case letter,or a capital letter"
+(([a-z])+)|((.*)([0-9])),lines containing a lower-case letter or ending with a number 1 or more times
+"([A-Z].*..*){5,}","lines with a capital letter followed by a character, at least 5 times"
+"([0-9].*[a-z].*){7,}","lines with a number followed by lower-case letter, 7 or more times"
+(([a-z])&(dog)&(truck)).*(ring).*,"lines having a lower-case letter, string 'dog', and string 'truck' before string 'ring'"
+((dog)|([0-9])|(.)).*([A-Z]).*,"lines having either string 'dog', number, or character before a capital"
+([0-9]).*(([a-z])&(.)&(dog)).*,"lines with number before lower-case letter, character, and string 'dog'"
+(.*[AEIOUaeiou].*)&(([A-Za-z])|(dog)),lines with either a vowel and a letter or the string 'dog'
+([A-Z].*dog.*)&((.*)([a-z])),lines that have a capital letter before 'dog' and end with a lower-case letter
+([a-z]).*((dog)&(truck)&(ring)).*,"lines containing a lower-case letter, the string 'dog', the string 'truck', and the string 'ring'"
+((([0-9])+)|([AEIOUaeiou]))(.*),lines starting in a number or vowel
+(.).*(([A-Z])+).*,lines with at least one capital letter with a character before it
+(.).*(.*dog.*).*,lines that have a character before the word string 'dog'
+(.).*((dog)&(truck)).*,"lines with the string ""dog"" and the string ""truck"" with a character before"
+"(..*dog.*){2,}",2 or more lines with a character followed by the string 'dog'
+(..*dog.*)*,lines with a character followed by zero or more of the string 'dog'
+((.)&([0-9])).*([A-Za-z]).*,Items with a numeral and character preceding a letter.
+(.*)(([A-Z])|([0-9])),lines with a capital letter or number
+~((.*)(dog)),lines which are not ending with containing only the string 'dog'
+(([AEIOUaeiou])&(.)&(dog)).*([0-9]).*,"lines having vowel, character, and string 'dog' before number"
+"(.*[A-Za-z].*){2,}","lines with a letter, at least twice"
+((.*[a-z].*)|([AEIOUaeiou]))+,lines with a lower-case letter or vowel
+(.*)(.*dog.*),lines ending with 'dog'
+(\b~([A-Za-z])\b)(.*),lines which are starting with words with not a letter
+~(([AEIOUaeiou])&(dog)&([a-z])),"lines without a vowel, string 'dog', or lower-case letter"
+"((.*[A-Z].*)|([AEIOUaeiou])){6,}",lines with 6 or more of a capital letter or vowel
+(([A-Za-z])*)&(([0-9])&(dog)&([A-Z])),"lines with string 'dog', capital letter, a number and with or without a letter."
+"(([a-z])|([0-9])){7,}",lines with 7 or more lower-case letter or a number
+"(dog).*(([A-Za-z]){6,}).*","lines containing the string ""dog"" followed by a letter at least 6 times"
+(.*([A-Za-z])&([0-9]).*).*([AEIOUaeiou]).*,Items with a numeral or a letter preceding a vowel.
+"\b([a-z]){7,}\b",Items with words containing a small letter at least seven times.
+"(\b(dog){3,}\b)(.*)",lines starting with the string 'dog' at least 3 times
+(([A-Z])&([A-Za-z])&(dog)).*(.).*,"lines that must have a capital letter, a letter, and the word 'dog' preceding a character"
+\b(([AEIOUaeiou])*)|(.)\b,lines with words and a vowel or character
+.*(dog)&([AEIOUaeiou])&([a-z]).*,"lines containing 'dog', a vowel, and a lower-case letter"
+"((~([AEIOUaeiou]))|([A-Za-z])){7,}","lines not having vowel or letter, 7 or more times"
+([0-9].*..*)&((.*)([a-z])),lines with a number before a character ending with a lower-case letter
+([A-Z]).*((dog)&([0-9])&([A-Za-z])).*,"lines with a capital letter before string 'dog', number, and letter"
+((.)(.*))&(([A-Za-z])*),"lines starting with a character and a letter, zero or more times in them"
+.*(.*)(([AEIOUaeiou])*).*,all lines
+"(([AEIOUaeiou])|(dog)){3,}",lines with a vowel or 3 or more of the string 'dog'
+(.*(.*)(dog).*)*,lines ending with or without the string 'dog'
+(([A-Za-z])|(dog)|(truck)).*([0-9]).*,"lines having a letter, the string 'dog' and 'truck' before a number"
+"((dog)|([A-Z])){6,}",lines containing the string 'dog' 6 times or a capital letter 6 times
+"([A-Z].*[0-9].*){6,}",lines containing a capital letter and followed by 6 or more numbers
+([a-z]).*((dog)&(.)).*,Items with a smal letter preceding 'dog' and a character.
+.*([A-Z])&([A-Za-z]).*,lines containing a capital letter and a letter in them
+(.*)([A-Z].*[0-9].*),lines ending with a capital letter and a number
+((dog)&(truck)&([A-Z])).*([a-z]).*,lines that must have the words 'dog' and 'truck' and a capital letter followed by a lower-case letter
+"(([A-Z])|([0-9])){2,}",lines with a number 2 times
+.*([a-z]).*((.)+).*.*,lines with a lower-case letter before a character
+"(((dog)|([a-z])){5,})(.*)","lines starting with string 'dog' or lower-case letter, 5 or more times"
+([AEIOUaeiou]).*(([0-9])|(dog)).*,lines with vowel before number or string 'dog'
+"(([0-9]){6,})&(.*[AEIOUaeiou].*)",lines with numbers at least 6 times having a vowel
+([a-z].*[0-9].*).*(~(dog)).*,lines with a lower-case letter followed by a number before anything not being the string 'dog'
+"(([0-9].*dog.*){7,})(.*)",lines starting in 7 or more of a number before string 'dog'
+([0-9].*dog.*).*([A-Z]).*,lines with a number before string 'dog' then capital letter
+([a-z].*dog.*)+,lines have to have at least one string 'dog' with a lower case letter
+"(([A-Z])|([A-Za-z])){5,}",lines containing upper or lower case alphabet characters in at least five instances
+"(\b[AEIOUaeiou].*[0-9].*\b){4,}",4 or more with words which contain a vowel followed by a number
+(.).*((dog)&([a-z])&([A-Za-z])).*,"Lines with character before the string 'dog' lower case letter, and a letter"
+(([A-Z])&([AEIOUaeiou])).*(dog).*,"lines with the string 'dog' have a vowel, and a capital letter before it"
+((.)&(dog)&([A-Z])).*(truck).*,"lines having character, string 'dog', and capital letter before string 'truck'"
+([0-9]).*(([a-z])&([AEIOUaeiou])&(.)).*,"lines with numbers before a lower-case letter, a vowel, or a character"
+(([A-Z])&([a-z])&([A-Za-z])).*(dog).*,"lines that contain a capital letter, a lower-case letter, and a letter followed by the string 'dog'"
+([0-9]).*(~((dog)|(truck))).*,lines with a number before the string 'dog' or 'truck'
+.*(dog)|([a-z])|(.).*,"lines containing either string 'dog', lower-case letter, or a character"
+((.)(.*))|([AEIOUaeiou].*dog.*),lines containing a character or a vowel and the string 'dog'
+~(((dog)+)|([A-Z])),lines not having string 'dog' at least once or capital letter
+(.*(dog)&([A-Za-z]).*).*(truck).*,lines with the string 'dog' and letter before string 'truck'
+(\b([A-Za-z]).*([a-z]).*\b)*,"lines with words that contain a letter followed by a lower-case letter, zero or more times"
+.*([a-z])&([0-9])&(.).*,"lines with a lower-case letter, number, and character"
+(([AEIOUaeiou])+).*([0-9].*[a-z].*).*,"lines that contain a vowel followed by a number and a lower-case letter, at least once"
+\b.*([AEIOUaeiou])+.*\b,lines with words and a vowel
+"(.*[A-Za-z].*){6,}",lines wherein a letter is contained 6 or more times
+\b([A-Z])|([a-z])|(.)\b,"Items with words containing a character, a small letter, or a capitla letter."
+(.*)(([A-Za-z])|([AEIOUaeiou])),lines that end with a letter or a vowel
+~([A-Z].*dog.*),lines which are not having a capital letter followed by the string 'dog'
+"(([A-Za-z]){4,})(.*)",lines starting with a letter at least 4 times
+(([A-Za-z])&([AEIOUaeiou])).*([A-Z]).*,lines with a letter and a vowel occuring before a capital letter
+((.*)([a-z])).*(dog).*,Items terminating with a small letter precedig 'dog'.
+(\b([AEIOUaeiou])|(dog)|(truck)\b)+,"Items with words contating 'dog', a vowel, or 'truck' at least one time."
+".*([A-Za-z]){5,}.*","lines containing  letter, 5 or more times"
+"(([A-Z]){7,})|(([AEIOUaeiou]).*([A-Za-z]).*)",lines with 7 or more capital letters or vowels before a letter
+"(..*[AEIOUaeiou].*){3,}","lines with a character followed by vowel, 3 or more times"
+\b(([A-Za-z])|(dog)|([AEIOUaeiou]))|([a-z])\b,"lines with words containing either a letter, the string 'dog', or a vowel and a lower-case letter"
+(([a-z])|([A-Z]))*,lines with a lower-case or capital letter
+~((.*[A-Za-z].*)|([AEIOUaeiou])),lines not containing a letter vowel
+.*(([A-Z])|([0-9])).*(.).*.*,lines with a capital letter or a number preceding a character
+.*(.)|([A-Z])|([0-9]).*,"lines that contain a character, lower-case letter, or a number"
+"([A-Za-z].*[0-9].*){2,}",Lines containing a letter followed by 2 or more times a number
+([AEIOUaeiou]).*([0-9].*[a-z].*).*,lines with a vowel before number then lower-case letter
+(([a-z])|(dog)|([A-Za-z])).*(truck).*,"lines with a lower-case letter, string 'dog', or letter before the string 'truck'"
+([A-Za-z]).*((dog)|(truck)).*,Items with a letter preceding 'dog' or 'truck'.
+(dog).*(~(.)).*,"lines that the the word ""dog"" followed by anything but a character"
+((dog)&([0-9])).*([A-Z]).*,lines with the string 'dog' and a number preceding an uppercase letter
+(([0-9])(.*)).*(dog).*,lines which begin with a number that comes before the 'dog' string
+((dog)+)|(([A-Z])|(.)|([0-9])),"Lines with the string 'dog' at least once or either capital letter, a character, or a number"
+\b([A-Za-z])&([AEIOUaeiou])&(dog)\b,"The lines should have the string 'dog, a letter, and a vowel."
+\b([A-Za-z])&([AEIOUaeiou])&(dog)\b,"lines with words with a letter, vowel, and string 'dog'"
+~((([0-9])*)&([a-z])),"lines not having number, zero or more times and not a lower-case letter"
+"~(((dog){4,})(.*))",lines do not start with 4 or more of the string 'dog'
+".*(dog){4,}.*",lines containing 4 or more 'dog'
+~((([a-z])*).*([0-9]).*),"lines not having a lower-case letter, zero or more times before a number in it"
+"((dog)|([a-z])){6,}","lines with the string 'dog' or a lower-case letter, 6 or more times in them"
+~(((dog)(.*))*),lines not starting in zero or more of the string 'dog'
+\b(dog)&(.*truck.*)\b,lines that contain words with the string 'dog' and which also contain the string 'truck'
+".*(.){2,}.*",lines containing at least 2 characters
+((dog)+).*([A-Z]).*,lines with a capital letter preceded at least once by the string 'dog'
+"([AEIOUaeiou].*[a-z].*){5,}",lines that have five or more lower-case letters
+~(([A-Z])|([AEIOUaeiou])|([0-9])),"lines without a capital, a vowel, or number"
+"(.*)(([0-9]){2,})",lines ending with 2 or more numbers
+~(.*([0-9])*.*),"lines not containing number, zero or more times"
+.*([A-Z])&(dog)&([A-Za-z]).*,"lines having a capital letter, the string 'dog', and a letter"
+\b~((dog)&(truck))\b,lines with words without the string 'dog' or 'truck'
+~(((dog)|([0-9]))(.*)),lines which are not starting with the string 'dog' or a number
+(.*~([0-9]).*)(.*),lines starting with a number
+(~(dog))|((truck)(.*)),lines not having 'dog' or with 'truck'
+.*([a-z])&(.)&([A-Z]).*,"lines containing a character, lower-case, and capital letter"
+(([0-9])&(dog)).*((truck)*).*,"lines that contain a number and the strings 'dog' followed by 'truck', zero times or more"
+(([A-Za-z])|(dog)|(truck)).*(ring).*,"lines with either a letter, ""dog"", or ""truck"" before ""ring"""
+.*(([0-9])|([A-Za-z])|(dog)).*(truck).*.*,"lines with either a number, a letter, or the string 'dog' followed by the string 'truck'"
+\b((dog)|([A-Za-z]))(.*)\b,lines with words starting in the string 'dog' or letter
+((.)&(dog)).*(truck).*,"lines with a character string ""dog"" and before the string "" truck"""
+((.)&(dog)).*(truck).*,lines with a character and string 'dog' before 'truck'
+.*([0-9])&([a-z]).*,lines with a number and a letter.
+[A-Z].*..*,lines having capital letters followed by a character
+".*([AEIOUaeiou]){7,}.*",lines  with 7 or more vowels
+(([A-Za-z])+).*([AEIOUaeiou]).*,lines with a letter before a vowel
+.*([0-9])|([AEIOUaeiou]).*,The lines that have either a number or a vowel
+.*([0-9])&([A-Za-z]).*,Items with a letter and a numeral.
+(.*)(.*[A-Za-z].*),lines that conclude with a letter contained in them
+"(..*[AEIOUaeiou].*){6,}","lines with character followed by vowel, 6 or more times"
+(..*[a-z].*)+,lines that have at least one character followed by a lower-case letter
+"\b((dog)|([a-z])){3,}\b",lines with words and 3 or more of the string 'dog' or a lower case letter
+"(([AEIOUaeiou])|([0-9])){7,}","lines with a vowel or a number, 7 or more times in them"
+"(((dog){6,})(.*)).*([AEIOUaeiou]).*","lines starting with string 'dog', 6 or more times before vowel"
+(.*)([A-Za-z].*[AEIOUaeiou].*),lines ending with a letter before vowel
+".*(([a-z])|([0-9])){3,}.*",lines with a lower-case letter or a number at least 3 times
+\b(~([AEIOUaeiou]))&([A-Za-z])\b,lines with words that don't have a vowel and a letter in them
+"((.*[A-Za-z].*){4,}).*(dog).*",lines containing 4 or more letters and the string 'dog'
+((dog)|((truck)&(ring)))+,lines with 'dog' or 'truck' and at least one 'ring'
+(([A-Za-z])&([a-z])&([0-9])).*([A-Z]).*,"lines which are having a letter, a lower-case letter, and a number before a capital letter"
+~(dog.*[A-Z].*),lines without the string 'dog' before a capital letter
+"(([0-9])|([a-z])){7,}",Items with a numeral or small letter at least seven times.
+(([a-z])|([0-9])).*([A-Z]).*,Items with a numeral or a small letter preceding an upper case letter.
+(.).*(([A-Z])|(dog)).*,"Lines containing a number, the string ""dog"" or a lower-case letter in front of a capital letter"
+.*(dog)&([AEIOUaeiou])&(.).*,"lines with the string 'dog', a vowel, and a character"
+((.)|(dog)).*([A-Za-z]).*,lines with a character or the string 'dog' before a letter in them
+"~(((dog){3,}).*(truck).*)",lines with less than 3 of the string 'dog' before the string 'truck'
+(\b([A-Za-z])+\b).*(dog).*,lines with a letter before 'dog'
+~((([0-9])(.*))|(dog)),lines do not start with a number nor the string 'dog'
+"(.*)((.){7,})",lines with a character 7 times
+~((dog)&([0-9])&([AEIOUaeiou])),"lines that do not contain the string 'dog', a number, or a vowel"
+(([a-z])&(dog)&(.)).*(truck).*,"lines having a lower-case letter, string 'dog', 'truck', and a character"
+((dog)&([0-9])&([AEIOUaeiou])).*(truck).*,"lines with the string 'dog', number, and vowel before string 'truck'"
+((dog)&([0-9])&([AEIOUaeiou])).*(truck).*,"lines with the string 'dog, a number, and vowel preceding the string 'truck'"
+~((dog)|(.)|([A-Za-z])),"lines that do not contain the string 'dog', a character, or a letter"
+~((dog.*truck.*)|([a-z])),lines without the string 'dog' before string 'truck' or lower-case letter
+"(..*[A-Z].*){2,}",lines with 2 or more of a character before letter
+"([a-z]){6,}",Items with a small letter at least six times.
+(.*)(..*[AEIOUaeiou].*),lines that terminate with a vowel coming after a character
+([0-9]).*((.)+).*,Items with a numeral preceding a character at least one time.
+"((.)|([AEIOUaeiou])){5,}",Items with a vowel or a character at least five times.
+(..*dog.*)+,Lines that have a character with the string 'dog' after.
+\b(dog)|(.)|(truck)\b,"Lines with the words either the string 'dog', a character, or the string 'truck'"
+~(([A-Z])|([0-9])),lines without a capital letter or number
+~([A-Za-z].*..*),lines that don't have a letter come before a character
+(.*(dog)|(truck)|(ring).*)*,"Lines containing the string dog, truck, ring, zero or more times."
+(.*dog.*)&((truck)&([A-Z])&(ring)),"lines containing the string 'dog' and 'truck',a capital letter and the string 'ring'"
+(dog).*([A-Za-z].*..*).*,Lines having the string 'dog' before a letter followed by a character
+\b(.)+\b,lines with words and only at least 1 character
+.*[0-9].*[A-Za-z].*.*,lines that have a number followed by a letter
+(([A-Za-z])|([a-z])).*(dog).*,lines with a letter or a lower-case letter before the string 'dog' in them
+((dog)|(truck)|([a-z])).*(ring).*,"lines containing either the string 'dog', the string 'truck', or a lower-case letter, and followed by the string 'ring'"
+.*((.)|([A-Z])).*(dog).*.*,lines with a character or capital letter before string 'dog'
+\b([A-Z])|(.)\b,lines that have words with a character or a capital letter
+.*(dog)&(truck)&([A-Za-z]).*,"lines that have the string 'dog', the string 'truck' and a letter"
+"(([A-Za-z]){6,}).*(dog).*",Items with a letter at least six times prior to 'dog'.
+(dog).*((.)&([0-9])).*,lines that have a character and a number followed by the string 'dog'
+(([a-z])+).*([A-Za-z]).*,"on at least one occurance, lines should have a letter following a lower case letter"
+([A-Za-z]).*(~([a-z])).*,lines that contain a letter followed by anything other than a lower-case letter
+([0-9]).*(([AEIOUaeiou])+).*,lines with a vowel after a number 1 or more times
+"(.*)(\b(.){6,}\b)",lines ending with words with a character 6 times
+(dog).*((truck)|([a-z])|(ring)).*,"lines with the string 'dog' before either the string 'truck', a lower-case letter, or the string 'ring' in them"
+"(~([A-Z]))|(([AEIOUaeiou]){5,})",lines without 5 or more capital letters or a vowels
+\b~(([AEIOUaeiou])&([A-Z])&(dog))\b,"lines with words without a vowel, capital letter, or string 'dog'"
+((.*)(([a-z])|([AEIOUaeiou])))+,lines ending in lower-case letter or vowel
+"((dog){3,})|([AEIOUaeiou].*truck.*)","lines with the string 'dog', 3 or more times or a vowel followed by the string 'truck' in them"
+((dog)(.*))&(truck.*[A-Za-z].*),lines with the string 'dog' and 'truck' before a letter
+(([a-z].*[0-9].*)+)(.*),lines starting in a lower-case letter before a number
+(([0-9])|(dog)).*([AEIOUaeiou]).*,lines with a number or string 'dog' before a vowel
+(([0-9])*).*([A-Za-z]).*,Items with a numeral preceding a letter.
+((.*)([0-9])).*(dog).*,Items terminating with a numeral preceding 'dog'.
+([AEIOUaeiou]).*(([A-Z])|([a-z])).*,lines that have a vowel before a capital or lower-case letter
+.*(dog)|([AEIOUaeiou])|([a-z]).*,"lines with the string 'dog', vowel, or lower-case letter"
+(.*)(\b~(dog)\b),lines which are ending with words with not the string 'dog'
+(dog.*truck.*).*([A-Za-z]).*,lines with the strings 'dog' before 'truck' before a letter
+~((dog)&([AEIOUaeiou])&([A-Za-z])),"lines which do not contain the string ""dog"" or a vowel or a letter"
+\b~(([A-Za-z])|(dog))\b,lines with words that don't have a letter or the string 'dog' in them
+((dog)+)|(([A-Z])|([0-9])|([AEIOUaeiou])),"lines with string 'dog' at least once or either a capital, number, or vowel"
+((dog)|((.*)([A-Za-z])))*,lines with the string 'dog' or ending with zero or more of a  letter
+"(([A-Z]){6,}).*([0-9]).*",lines with 6 or more capital letters before a number
+.*([A-Za-z])|(dog)|(.).*,"lines with a letter, the string 'dog', or a character"
+(.*)(\b(dog)&([AEIOUaeiou])\b),lines ending in words with string 'dog' and vowel
+\b([a-z])&(dog)&(.)\b,"lines with words and a lower-case letter, string 'dog', and character"
+\b(dog.*truck.*).*(.).*\b,lines with words with the string 'dog' followed by the string 'truck' before a character in them
+.*((.*)([0-9]))+.*,lines ending with a number one or more times
+(~([A-Za-z])).*(dog).*,lines without a letter before the string 'dog'
+.*(.)&([a-z])&([0-9]).*,"lines containing a character, lower-case letter, and a number"
+(([0-9])|([A-Za-z])).*([AEIOUaeiou]).*,Items with a letter or numeral preceding a vowel.
+"(\b..*dog.*\b){7,}",Items with words containing a character preceding 'dog' at least seven times.
+"((dog)|([A-Z])){3,}",lines with 'dog' or a capital over 3 times
+\b(([A-Za-z])|([0-9]))+\b,lines containing words with a letter or a number 1 or more times
+~((([A-Za-z])(.*))&(dog)),lines not starting with a letter or string 'dog'
+(dog).*(([0-9])&([A-Za-z])).*,lines with string 'dog' before a number and a letter
+(dog).*(([A-Za-z])|([A-Z])).*,lines with the string 'dog' before a letter or a capital letter in them
+\b([a-z].*[0-9].*)*\b,"lines with words with a lower-case letter followed by a number, zero or more times in them"
+".*(.*)(([a-z]){2,}).*","lines containing  lower-case letter, 2 or more times"
+"((dog){4,})|(truck.*[0-9].*)",lines with 4 or more of the string 'dog' or with string 'truck' before number
+"~((dog.*truck.*){5,})",lines that doesn't have the string 'dog' before five or more of the string 'truck'
+.*([0-9])|(dog)|([A-Za-z]).*,"lines with a number, string 'dog', or letter"
+"\b(.*dog.*){3,}\b",lines with words that have the string 'dog' at least 3 times
+([A-Z]).*(..*[a-z].*).*,lines with a capital letter before a character followed by a lower-case letter in them
+([0-9]).*(([AEIOUaeiou])|(dog)|([A-Za-z])).*,lines that contain a number followed by a vowel or 'dog' or a letter
+(([A-Za-z])|([AEIOUaeiou])).*(dog).*,lines with a letter or vowel before the string 'dog'
+"(([a-z]){4,}).*([A-Za-z]).*",Items with a small letter at least four times preceding a letter.
+(dog.*[A-Z].*).*(truck).*,lines with the string 'dog' before a capital letter before string 'truck'
+(\b([a-z])&([AEIOUaeiou])&(dog)\b)+,"Lines with words with lower case letter, vowel, and the string 'dog' at least once"
+\b.*(dog)&([0-9])&(truck).*\b,"lines with words with 'dog', a number, and 'truck'"
+.*(dog)&([0-9])&([AEIOUaeiou]).*,"lines with string 'dog', a number, and vowel"
+"([0-9]).*((.){7,}).*","lines with number containing only a character, 7 or more times"
+"(\b([A-Z]).*([0-9]).*\b){3,}",lines with words and 3 or more of a capital letter before number
+"([A-Za-z].*..*){4,}","lines with a letter followed by a character, 4 or more times in them"
+(\bdog\b)+,lines containing words with only the string 'dog' 1 time or more
+~(((dog)|(truck))(.*)),lines that don't begin with the string 'dog' or the string 'truck'
+"(..*[0-9].*){3,}",lines where 3 or more times a number is preceded by a character
+[0-9].*[AEIOUaeiou].*,lines containing a vowel preceded by a number
+"([A-Z]).*((dog){7,}).*",Items with an upper case letter preceding 'dog' at least seven times.
+"([a-z].*[A-Za-z].*){2,}","lines having lower case letters before a letter, twice or more"
+(.).*(([AEIOUaeiou])&(dog)&([a-z])).*,"Lines containing a number, the string ""dog"" or a lower-case letter in front of a capital letter"
+(dog).*((truck)&([0-9])&(ring)).*,"lines containing the string 'truck', a number, and the string 'ring' after the string 'dog'"
+\b([A-Za-z])|([A-Z])|([a-z])\b,"lines with words with either a letter, a capital , or lower-case letter"
+\b(([AEIOUaeiou])|([0-9])|([a-z]))|(dog)\b,"lines with words with either a vowel, number, or lower-case letter or string 'dog'"
+((.)|([A-Z]))*,lines with a character or with only zero or more capital letters
+\b(dog).*((.)|([A-Z])).*\b,lines with words with string 'dog' before character or capital letter
+~((([a-z])*)&([A-Z])),"lines not having lower-case letter, zero or more times and not a capital"
+([AEIOUaeiou]).*(dog.*..*).*,"lines with the string 'dog' and then a character, all preceded by a vowel"
+(([A-Z])+)|(.*[A-Za-z].*),lines with a letter
+"(([A-Z])|([a-z])){7,}","lines with a capital letter or a lower-case letter, 7 or more times in them"
+(.*)(([a-z])|(([A-Z])(.*))),lines ending in a lower-case letter or starting in capital letter
+((dog)|((truck)(.*)))*,lines with zero or more of the string 'dog' or starting in string 'truck'
+~([A-Za-z]),Lines without any letters
+(dog).*(.*[AEIOUaeiou].*).*,lines containing a vowel preceded by the string 'dog'
+((dog)|([A-Z])|([AEIOUaeiou])).*([0-9]).*,"Items with an upper case letter, 'dog', or a vowel preceding a numeral."
+"([AEIOUaeiou]).*(([A-Z]){6,}).*",lines with a capital letter after a vowel at least 6 times
+(.*)(..*dog.*),lines ending with a character before the string 'dog'
+(.*)(([a-z])|([AEIOUaeiou])),lines ending in either a vowel or a lower-case letter.
+\b([0-9])|([AEIOUaeiou])|([A-Z])\b,"lines containing either a number, a vowel, or a capital letter"
+([AEIOUaeiou]).*((dog)+).*,lines with a vowel 'dog' at least once.
+~(([0-9].*dog.*)|(truck)),lines not having a number followed by the string 'dog' or 'truck'
+"~(((dog)(.*)){3,})",lines with less than 3 of strings 'dog'
+"([A-Za-z]).*((dog){6,}).*","lines with letter before string 'dog', 6 or more times"
+([0-9].*[A-Z].*).*([a-z]).*,lines with number followed by capital letter before lower-case letter
+((dog)+)&((.*)([A-Z])),lines that contain the string 'dog' at least once and end with a capital letter
+\b.*(dog)&([AEIOUaeiou])&(truck).*\b,"lines having words with the string 'dog', a vowel, and 'truck'"
+(([A-Za-z])+)&(([AEIOUaeiou])&([A-Z])&(dog)),"lines with a letter and a vowel, capital letter, or string 'dog'"
+~(([A-Za-z])&([A-Z])&(.)),"lines that do not contain a letter, capital letter, or a character"
+(\b([A-Za-z])&(.)\b)+,lines containing words with a letter and a character minimum of one time
+"((.){7,}).*(dog).*",lines with characters over seven times before 'dog'
+(([a-z])*).*([A-Z]).*,Items with a small letter preceding a capital letter.
+"(..*dog.*){7,}",Items with a character preceding 'dog' at least seven times.
+"((dog.*..*)|(truck)){6,}",Items with 'dog' preceding 'truck' or a character at least six times.
+(([0-9])(.*))+,lines which are starting with a number at least once
+".*~(([A-Za-z]){3,}).*",lines not containing 3 or more letters
+"(([0-9])(.*)){7,}",lines stating with 7 or more numbers
+((.*)(dog))&(([AEIOUaeiou])|([A-Za-z])|([0-9])),"lines ending with string 'dog' and either a vowel, letter, or number"
+([a-z].*dog.*).*(.).*,lines with lower-case letter followed by string 'dog' before character
+"(.*)((dog)|(([AEIOUaeiou]){4,}))",lines ending in 4 or more of the string 'dog' or vowel
+(dog).*((.*)([AEIOUaeiou])).*,lines with 'dog' before a vowel
+([0-9]).*([AEIOUaeiou].*dog.*).*,lines with a number before vowel then string 'dog'
+(([a-z].*dog.*)+).*(truck).*,lines with a lower-case letter followed by the string 'dog' at least once before the string 'truck' in them
+.*([AEIOUaeiou])|([A-Z]).*,lines having a vowel or a capital letter
+((dog)|(.)).*([0-9]).*,lines with the string 'dog' and a character before a number
+"(((.){5,})|([A-Z]))(.*)",lines starting in 5 or more characters before a capital letter
+.*(.)|([0-9])|(dog).*,"lines with either a character, number, or string 'dog'"
+"(dog.*truck.*)|(([A-Za-z]){3,})",lines with the string 'truck' or a letter following the string 'dog' at least 3 times
+~(([AEIOUaeiou])|([A-Z])|([0-9])),"lines that do not contain a vowel, a capital letter, or a number"
+\b(dog)&([0-9])&(truck)\b,lines with words and the strings 'dog' and 'truck' and a number
+"((.){6,}).*([0-9]).*",lines with 6 or more of a character before a number
+((dog)|(truck)).*([a-z].*..*).*,lines with string 'dog' or string 'truck' before a lower-case letter followed by character
+.*(([a-z])|(dog))+.*,lines containing a lower-case letter or string 'dog' at least once
+"(([AEIOUaeiou]){6,})|(~([A-Za-z]))",lines with a vowel 6 times
+~((.*)(([AEIOUaeiou])|(dog))),lines not ending with vowel or string 'dog'
+((dog).*([0-9]).*)&((.*)(truck)),lines with the string 'dog' before a number and ending with the string 'truck' in them
+([A-Za-z]).*(..*dog.*).*,lines with a letter before character then string 'dog'
+(([AEIOUaeiou])*)&((dog).*(truck).*),"lines that contain the strings 'dog' followed by 'truck' or contain a vowel, zero times or more"
+\b([A-Za-z]).*([AEIOUaeiou]).*\b,lines containg words where a letter precedes a vowel
+((dog)*)|(([0-9])&(.)),"lines with or without the string 'dog', or a number and a character"
+"([AEIOUaeiou].*..*){2,}","lines containing a vowel before a character, 2 or more times"
+([AEIOUaeiou])(.*),lines which begin with vowels
+..*dog.*,Lines with a character followed by 'dog'
+([a-z]).*(dog.*..*).*,Items with a small letter preceding 'dog' preceding a character.
+.*(.)|([A-Z])|(dog).*,"lines that have a choice of one character, one capital letter, or the word ""dog"""
+"((.*)(dog)){4,}",lines that finish with the 'dog' string 4 times or more
+([A-Za-z]).*([a-z].*[A-Z].*).*,lines with lower case followed by a capital letter after a letter
+"~(((.){2,}).*([AEIOUaeiou]).*)","lines where a vowel is not preceded, 2 or more times, by a character"
+~((dog)&(truck)&(.)),"lines that do not contain the string 'dog', the string 'truck', or a character"
+([AEIOUaeiou].*[a-z].*).*((.)&([A-Z])&([A-Za-z])).*,lines with a vowel before a lower-case and upper-case letter
+\b((dog).*([A-Za-z]).*)|([A-Z])\b,lines with words and the string 'dog' before a letter
+(.*[AEIOUaeiou].*).*([a-z]).*,a lower case letter after a vowel in the lines
+".*([AEIOUaeiou].*dog.*){3,}.*","lines which are containing a vowel followed by the string 'dog', 3 or more times"
+((dog)+)|((truck).*([A-Za-z]).*),lines with the string 'dog' at least once or the string 'truck' before a letter in them
+(([AEIOUaeiou])(.*))|((dog).*(truck).*),lines that start with a vowel or 'dog' before 'truck'
+(dog).*(([0-9])&(.)&(truck)).*,"lines with the string 'dog' before a number, a character and 'truck'"
+((.*)([A-Z]))&(..*dog.*),"lines end with a capital letter and a character, then followed by the string 'dog'"
+(([AEIOUaeiou]).*(dog).*)|((truck)+),lines with a vowel before string 'dog' or 'truck'
+(.*)(\bdog\b),lines that end with words only with 'dog'
+"([0-9]).*((dog){6,}).*","lines with a number before string 'dog', 6 or more times"
+(.*)([A-Za-z].*..*),lines that end with a letter preceding a character
+\b.*(.*)([A-Z]).*\b,lines with words ending in capital letter
+(.*[0-9].*)|(([AEIOUaeiou])*),"lines containing a number or vowel, either zero times or more"
+(.*)(([0-9])*),lined ending with a number
+((.)&([A-Za-z])&([AEIOUaeiou])).*(dog).*,"lines with a character, letter, and vowel before string 'dog'"
+([a-z]).*(([0-9])+).*,lines with a lower-case letter before a number
+((dog)|([AEIOUaeiou])).*(.).*,lines with a character before the string 'dog' or a vowel
+"(dog.*[a-z].*){6,}","lines in which the string 'dog' is followed by a letter that's lower-case, at least six times"
+([A-Za-z]).*(dog.*[0-9].*).*,"lines where the string 'dog' has a number after it, if there is a letter before the string 'dog'"
+(.*)(..*[A-Za-z].*),lines ending with character followed by letter
+"((dog){7,})(.*)",Items beginning with 'dog' at least seven times.
+((dog).*(.).*)|((truck)&([a-z])),lines with the string 'dog' before a character or the string 'truck' and a lower-case letter in it
+(([AEIOUaeiou])+).*(([A-Z])|(dog)|([A-Za-z])).*,"lines with vowel at least once before either a capital letter, string 'dog', or letter"
+"(([a-z])|(dog)){7,}",lines containing a lower-case letter or the string 'dog' at least 7 times
+([0-9]).*((dog)&(truck)&([AEIOUaeiou])).*,"lines that have a number followed by the word ""dog"", the word ""truck"", and a vowel"
+([AEIOUaeiou].*[A-Z].*)*,lines with a vowel preceding a capital letter at least zero times
+((dog)&([a-z])&([A-Za-z])).*(truck).*,"lines with the string 'dog', lower-case letter, and a letter before the string 'truck"
+"((dog){3,}).*(.).*","lines with the string 'dog', 3 or more times before a character in them"
+(.*dog.*).*(([AEIOUaeiou])&([a-z])&([A-Za-z])).*,"lines that must have the word 'dog' followed by a vowel, a lower-case letter, and a letter"
+((~(dog))|(.))*,lines with zero or less string 'dog' or character
+((.)|([A-Za-z])|(dog)).*([AEIOUaeiou]).*,"lines having either a character, letter, or string 'dog' before a vowel"
+\b([a-z])|([A-Z])|([AEIOUaeiou])\b,"lines containing words that have either a lower-case letter, a capital letter, or a vowel"
+(.*dog.*)&((truck)&([a-z])&([A-Za-z])),"Lines with ""dog"", ""truck"", and at least one small letter"
+"((..*dog.*)(.*)){2,}","lines that use the string 'dog' twice or more, after a character."
+~(([a-z])&(([A-Z])+)),lines without a lower-case letter or capital letter
+([A-Z]).*(([0-9])|(.)).*,lines containing a capital letter followed by a number or a character
+.*(([A-Z])+).*([a-z]).*.*,lines with a capital letter before a lower-case letter
+\b([0-9])|([A-Za-z])\b,lines with words numbers or letters
+([A-Z]).*(.*dog.*).*,lines containing the string 'dog' after a capital letter
+([AEIOUaeiou]).*((dog)&(truck)).*,"lines containing a vowel followed by the strings ""dog"" and ""truck"""
+(.*[A-Za-z].*).*([AEIOUaeiou]).*,lines that contain a vowel before a letter
+~(([0-9])|([a-z])|(dog)),"lines without a number, lower-case letter, or the string 'dog'"
+~(([AEIOUaeiou])&(dog)&([0-9])),"lines without a vowel, string 'dog', or number"
+~(([AEIOUaeiou])&(dog)&([0-9])),"No vowel, the string 'dog, or a number in the lines"
+(.*)(\b(dog)*\b),lines that either do not or contain at least one ending with words with the string 'dog'
+"(dog.*[AEIOUaeiou].*){3,}",lines that have 'dog' before 3 or more vowels
+(.*)(([A-Z])|(.)),lines ending with capital letter or character
+(.*(dog)|(truck).*)+,lines having the string 'dog' or 'truck' at least once
+(.*[a-z].*)|(([A-Z]).*([AEIOUaeiou]).*),lines with a lower-case or capital letter before a vowel
+([a-z]).*(\b([A-Z])&([0-9])&([AEIOUaeiou])\b).*,"Lines with a small letter before a word containing a capital, as well as a number"
+((.)|([AEIOUaeiou]))*,lines with a character or vowel
+~((dog)&([0-9])&(truck)),"lines without the string 'dog', a number, or the string 'truck'"
+((dog)|(truck)|([a-z])).*([0-9]).*,lines with the string 'dog' or 'truck' or lower-case letter before a number
+~((([a-z])(.*)).*(dog).*),lines without a lower-case letter before string 'dog'
+"((.*)(dog))|((truck){5,})",lines ending in 5 or more of the string 'dog' or 'truck'
+(\b([0-9])|([A-Za-z])|(dog)\b)*,"lines that may or may not contain a number, letter, or the string 'dog'"
+~(..*[AEIOUaeiou].*),Items without a character preceding a vowel.
+"((dog)|([AEIOUaeiou])){4,}",lines where 4 or more times the string 'dog' or a vowel is contained
+(([AEIOUaeiou])&(.)).*([0-9]).*,lines with a number after a vowel or a letter
+(([A-Z])|([a-z])).*(dog).*,Items with a any letter preceding 'dog'.
+(.).*(([A-Za-z])+).*,lines with a character before a letter
+(dog).*(([AEIOUaeiou])&([A-Z])).*,lines with a vowel and a capital letter after the string 'dog'
+.*\b([A-Z]).*(dog).*\b.*,lines containing words with a capital before string 'dog'
+"\b(.){5,}\b",lines with words with a character 5 times
+((dog).*([0-9]).*)|((truck)|([A-Za-z])|(.)),"lines with string 'dog' before number or either string 'truck', a letter, or character"
+(.*)((([A-Za-z])&([AEIOUaeiou]))|(dog)),lines ending in a letter and vowel or string 'dog'
+([0-9]).*((dog)|(.)).*,lines with a number followed by either the string 'dog' or a character
+((.)*)|((dog)|(truck)|(ring)),"lines with a character, zero or more times or either the string 'dog', the string 'truck', or the string 'ring' in them"
+"((.){2,}).*([A-Za-z]).*","lines that contain a character followed by a letter, at least twice"
+((.*[A-Z].*)|([a-z]))+,lines with a capital or lower-case letter
+([AEIOUaeiou]).*((dog)&([A-Z])&(truck)).*,lines with a vowel before string 'dog' and 'truck' and capital letter
+"(([AEIOUaeiou])|([A-Za-z])){6,}",Lines with vowels and letters more than 6 times.
+\b([A-Za-z])|(dog)|(truck)\b,"lines with a letter, 'dog' or 'truck'"
+\b([A-Z])&(dog)&(truck)\b,"lines with words that have a capital letter, the string 'truck', and the string 'dog'"
+\b(.)|(dog)|([0-9])\b,"lines containing a character, the string 'dog', or a number"
+([A-Za-z]).*(([0-9])+).*,lines with letter before number at least once
+~(([AEIOUaeiou])|([A-Za-z])|(.)),"lines not having vowel, letter, or a character"
+(([A-Z].*[0-9].*)(.*))*,"lines starting with a capital followed by number, zero or more times"
+"(\b(.)|(dog)\b){2,}","lines with words with a character or string 'dog', 2 or more times"
+(([A-Z])&([a-z])&([A-Za-z])).*(.).*,"lines with a capital letter, lower-case letter, and letter before a character"
+((.*)(([AEIOUaeiou])|([A-Za-z])))*,lines ending in zero or more of a vowel or letter
+(.*([A-Z])&(dog).*)*,"lines which are containing a capital letter and the string 'dog', zero or more times"
+(.*)(.*([0-9])|([a-z]).*),lines ending with numeral or lower-case letter
+(.*)((~([A-Za-z]))|([0-9])),lines ending in anything but a letter or number
+.*[AEIOUaeiou].*dog.*.*,lines containing string 'dog' after a vowel
+((dog)&([A-Za-z])&(truck)).*([a-z]).*,"lines containing the string ""dog"", a letter, and the string ""truck"" followed by a lower-case letter"
+"(([AEIOUaeiou])|([a-z])){6,}","lines containing a lower-case letter or a vowel, 6 or more times"
+.*~([A-Z]).*,Items without a captial letter.
+((.)&([A-Za-z])).*(dog).*,Items with a letter and a character preceding 'dog'.
+.*(dog)&(truck)&(ring).*,"lines containing string 'dog', string 'truck', and string 'ring'"
+"(dog.*truck.*)|((ring){7,})",lines with the 7 or more of the strings 'dog' before 'truck' or 'ring'
+"((([A-Za-z])(.*)){7,}).*([A-Z]).*","lines starting with letter, 7 or more times before a capital"
+\b[a-z].*[AEIOUaeiou].*\b,lines that contain words with a vowel preceded by a lower-case letter
+(([A-Z])|(([0-9]).*([a-z]).*))+,lines with capital letter or number before lower-case letter at least once
+(.*dog.*)&((truck).*(ring).*),lines with the string 'dog' and 'truck' before 'ring'
+(dog).*(([A-Z])&(truck)&([AEIOUaeiou])).*,"lines with the string 'dog' before capital letter, string 'truck', and vowel"
+\b([A-Za-z])|([A-Z])|([0-9])\b,"lines with words with either a letter, a capital letter, or a number in them"
+(\b[A-Z]\b)(.*),lines that begin with only a capital letter
+(([A-Z])|([0-9])|(.)).*(dog).*,"lines with a capital letter, number, or character"
+(([A-Za-z])*).*(.*dog.*).*,"lines with a letter, zero or more times before containing the string 'dog' in them"
+([a-z].*..*)*,Items with a small letter preceding a character.
+([A-Z].*..*).*(dog).*,"The lines with a capital letter coming before a character, followed by the string 'dog'"
+([AEIOUaeiou]).*(([A-Z])+).*,Items with a vowel preceding an upper case letter at least one time.
+(([AEIOUaeiou])|([a-z])).*(.).*,lines that have a character after a fowel or a lower-case letter
+\b(dog)|([AEIOUaeiou])|(truck)\b,"lines with words with either string 'dog', vowel, or string 'truck'"
+\b(dog)&([a-z])&([A-Za-z])\b,"lines with words, the string 'dog', and a letter"
+(.*([a-z])|(dog)|(truck).*)*,lines with zero or more of a lower-case letter or string 'dog' or 'truck'
+(.*([a-z])|(dog)|(truck).*)*,all lines
+(([AEIOUaeiou])+).*(~([A-Za-z])).*,lines with a vowel once or more before a non letter
+"((dog){5,}).*(.).*","lines with string 'dog', 5 or more times before character"
+~(((.*)([a-z])).*(.).*),lines with no lower-case letter before a character
+([a-z]).*((dog)|([A-Za-z])|([0-9])).*,"lines with  lower-case letter before either the string 'dog', a letter, or number"
+~((dog)|([a-z])|(truck)),"lines not having string 'dog', a lower-case letter, or string 'truck'"
+.*\b(dog)+\b.*,lines containing words with at least one 'dog'
+~(([A-Z])|(dog)|([AEIOUaeiou])),"lines that do not contain a capital letter, a vowel, or the string 'dog'"
+(\b([A-Za-z]).*(dog).*\b)*,Words with a letter appears before the string 'dog' zero or more times in the lines
+.*([a-z])|([0-9]).*,lines containing lower-case letter or number
+([a-z]).*(dog).*,lines with the string 'dog' after a lower case letter
+([0-9].*..*)+,lines that have at least one combination of a number before a character
+(.).*(([A-Za-z])|([0-9])|(dog)).*,"lines with a letter, a number, or the string 'dog' after a character"
+"(.*)(([0-9]){3,})",lines ending with a number at least 3 times
+((dog)*).*([A-Z]).*,lines with the string 'dog' before a capital letter
+\b([0-9])|([AEIOUaeiou])\b,lines with words with number or vowel
+([AEIOUaeiou].*[a-z].*).*(dog).*,lines with a vowel followed by a lower-case letter before 'dog'
+.*[a-z].*[0-9].*.*,lines containing lower-case letter followed by number
+.*~(([a-z]).*(.).*).*,lines without a lower-case letter just before a character
+\b([AEIOUaeiou].*[a-z].*)*\b,lines having words containing vowels which don't precede a lower-case letter
+(dog).*(.*([A-Za-z])+.*).*,lines with string 'dog' before 1 or more of a capital letter
+"(([0-9]){4,})&(dog.*truck.*)",lines with a number at least 4 times with the string 'dog' followed by 'truck'
+\b(.*)([AEIOUaeiou].*[A-Za-z].*)\b,lines with words ending in vowel before letter
+\b([0-9])&([AEIOUaeiou])&([A-Za-z])\b,"lines with words containing a number, a vowel, and a letter"
+([A-Za-z]).*((dog)|(.)).*,lines containing a letter or a character before the string 'dog'
+~((dog)&([A-Za-z])&([0-9])),"lines without the string 'dog', letter, or a number"
+((dog)|(truck)|(.)).*([a-z]).*,"lines with a lower-case letter after the string 'dog', the string 'truck', or a character"
+"(([A-Z])|([0-9])){4,}",lines with 4 or more of a capital letter or number
+(([A-Z])&(dog)&(truck)).*(ring).*,"Lines having capital letter, the string 'dog', and the string 'truck' before the string 'ring'"
+(.*dog.*).*((truck)+).*,lines which are containing the string 'dog' before the string 'truck' at least once
+\b([A-Za-z])+\b,lines with words with letter at least once
+((.*)(.)).*((dog)|([0-9])|(truck)).*,lines ending in a character before string 'dog' or 'truck' or number
+(dog).*(truck.*[0-9].*).*,lines with string 'dog' before string 'truck' with number following
+\b([a-z]).*([AEIOUaeiou]).*\b,lines with words with a lower-case letter before a vowel in them
+.*([0-9])&([a-z])&(dog).*,"lines with a number, lower-case letter, and"
+(.*)((.*[0-9].*)*),"lines that may have numbers, maybe at the end."
+((dog)&(truck)&([a-z])).*([A-Z]).*,lines with the string 'dog' and 'truck' and lower-case letter before a capital letter
+"([0-9].*[A-Za-z].*){6,}",lines wherein 6 or more times there is a letter preceded by a number
+(dog).*(([AEIOUaeiou])|(truck)|(ring)).*,"Items with 'dog' preceding 'truck', 'ring', or a vowel."
+.*([a-z])+.*,lines containing only lower-case letter at least once
+\b([A-Za-z])|([AEIOUaeiou])\b,lines contains only a letter or a vowel
+"(~([AEIOUaeiou]))|(([0-9]){5,})",lines with no vowel or number 5 times
+\b([A-Za-z])|([A-Z])|([AEIOUaeiou])\b,"lines with words with either a letter, a capital, or vowel"
+"(([AEIOUaeiou]){7,}).*([a-z]).*",lines which contain a vowel at least 7 or more times before a lower-case letter
+((dog)+)&(([0-9])&(truck)&(ring)),lines with the string 'dog' and a number and string 'dog' and 'ring'
+([0-9]).*((dog)|([A-Za-z])).*,Items with a numeral preceding 'dog' or a a letter.
+(dog.*truck.*).*(.).*,lines with 'dog' followed by 'truck' before a character
+.*(.)&([A-Za-z])&([0-9]).*,"lines with a character, a letter, and a number"
+(([a-z])&(dog)).*([A-Z]).*,lines with a lower-case letter and string 'dog' before a capital letter
+(.).*(~([A-Za-z])).*,lines with a character before a non letter
+"(([A-Z])|([AEIOUaeiou])){7,}",lines with 7 or more capital letters or a vowels
+"((dog)|([A-Za-z])){6,}","lines containing only string 'dog' or letter, 6 or more times"
+(([0-9])*).*(.).*,lines with a number before a character
+~(.*([AEIOUaeiou])&(.).*),lines not containing a vowel a character
+((dog)|([A-Z])|(truck)).*([AEIOUaeiou]).*,"lines having either the string 'dog', a capital letter, or the string 'truck' before a vowel in them"
+(.*[AEIOUaeiou].*dog.*.*)+,lines with a vowel before string 'dog'
+"(([AEIOUaeiou]).*([a-z]).*)|((dog){6,})","lines with a vowel before a lower-case letter or the string 'dog', 6 or more times in them"
+"(([A-Za-z])|((.*)([a-z]))){4,}",lines with a letter or ending in 4 or more of a lower-case letter
+(dog.*[A-Z].*).*(.*truck.*).*,lines with the string 'dog' before a capital letter then string 'truck'
+(dog.*..*).*(([0-9])|([AEIOUaeiou])).*,lines with the string 'dog' before a character then a number or vowel
+([a-z])(.*),lines that have a lower-case letter at the start
+\b(.)&([0-9])&([a-z])\b,"lines with words, a character, number, and lower-case letter"
+(([A-Z])|(dog)|(truck)).*([A-Za-z]).*,"Items with an upper case letter, 'dog', or 'truck' preceding a letter."
+(([A-Z])(.*))|((.*)([a-z])),Lines that begin with a capital and end with a lowercase
+(dog).*(([a-z])|([0-9])|([A-Z])).*,"lines with string 'dog' before a lower-case letter, number, or capital letter"
+((dog)|([AEIOUaeiou])|(truck)).*(ring).*,"lines with the string 'dog', a vowel, or the string 'truck' before the string 'ring'"
+(.*)((([a-z]).*(dog).*)|(truck)),lines ending with a lower-case letter before string 'dog' or string 'truck'
+(([a-z])+).*((.*)([AEIOUaeiou])).*,lines with a lower-case letter ending with a vowel 1 or more times
+"(.*([A-Za-z])|(dog).*){7,}","lines containing a letter or string 'dog', 7 or more times"
+(([A-Z])(.*))+,lines starting with a capital letter at least 1 time
+(((dog)&(truck))|(ring))*,lines with zero or more of string 'dog' and 'truck' or the string 'ring'
+([AEIOUaeiou]).*(([a-z])&(.)).*,lines with a vowel before lower-case letter and character
+"(.*..*){7,}",lines with only 7 or more characters
+\b(([a-z])|([0-9]))&([AEIOUaeiou])\b,lines containing words that have a lower-case letter or a number with a vowel
+~((([AEIOUaeiou])|([0-9]))*),lines without a vowel or a number
+(..*[0-9].*)|(([A-Z])*),lines with zero or more of a character before a number or capital letter
+~(([a-z])|(dog)|([0-9])),lines having upper case letters without the string 'dog' or a number.
+((dog)|([A-Za-z])|([0-9])).*(truck).*,"lines with 'dog', a letter, or a number before 'truck'"
+"(([A-Z]){4,}).*([A-Za-z]).*",lines with 4 or more capital letters before a letter
+([a-z]).*(~([A-Z])).*,lines with lower-case letter before a capital letter
+(dog).*((.*)(truck)).*,lines with the string 'dog' ending in string 'truck'
+(dog).*((.*)(truck)).*,lines with the string dog and then the string truck
+\b(dog)&(([A-Za-z])+)\b,"lines with words, the string 'dog', and a letter"
+"([0-9]).*((dog){7,}).*","lines with a number before string 'dog', 7 or more times"
+(~([A-Za-z]))&(([a-z])(.*)),lines not having letter and starting with lower-case letter
+(~(dog)).*([AEIOUaeiou]).*,lines not containing only string 'dog' before vowel
+((dog)&([A-Za-z])&([A-Z])).*([0-9]).*,"lines having string 'dog', a letter, and capital letter before number"
+\b((.*)([A-Z]))&([A-Za-z])\b,lines with words ending with a capital letter
+"(([AEIOUaeiou]){7,}).*([A-Z]).*","lines with a vowel, 7 or more times before a capital letter in them"
+([0-9].*[a-z].*)&(([A-Za-z])|(.)),"Lines with a series of different numbers, letters and characters"
+"(([a-z])|(.)){3,}",lines with 3 or more of a  lower-case letter or character
+(([a-z].*..*)|(dog))+,"lines with a character or the string 'dog', after a lower-case letter"
+(.).*(([a-z])&([A-Z])).*,"lines with a character, then a lower-case letter and a capital letter"
+((dog)|(.)|([AEIOUaeiou])).*(truck).*,"lines containing either the string 'dog', a character or a vowel before the string 'truck'"
+"(([A-Za-z])|(.)){3,}","Items with a character or a letter, at least thrice."
+"([A-Za-z].*dog.*){7,}",lines with with a letter followed by 7 or more of the string 'dog'
+".*(dog){5,}.*",Items with 'dog' at least five times.
+~(([A-Z])|([0-9])|([AEIOUaeiou])),"lines that do not contain an uppercase letter, number or vowel"
+((.)&(dog)&([A-Z])).*([0-9]).*,"lines having a character, string 'dog', and a capital before a number"
+((dog)|(truck)).*(([0-9])&([A-Za-z])&(ring)).*,"lines with string 'dog' or string 'truck' before number, a letter, and string 'ring'"
+((dog)&([a-z])&([0-9])).*(.).*,"lines having the string 'dog',a lower-case letter, and a number"
+(\b([0-9])&(dog)\b)(.*),lines starting in words with a number and string 'dog'
+([AEIOUaeiou]).*((dog)&([a-z])&([A-Za-z])).*,"lines with vowel before string 'dog', lower-case letter, and letter"
+(.*)(\b[0-9].*dog.*\b),lines ending in words with a number before string 'dog'
+(\b([0-9]).*(dog).*\b)+,lines with words with a number before string 'dog'
+"(.*)((([a-z]){7,})|([A-Z]))",lines ending in 7 or more lower-case letters or with a capital letter
+~((dog)&([AEIOUaeiou])&([0-9])),lines without the string 'dog' or a vowel or number
+((.)|([AEIOUaeiou])|([0-9])).*(dog).*,lines with a vowel or a number before 'dog'
+(.).*((dog)&([a-z])).*,Items with a character preceding 'dog' and a small letter.
+(([a-z])|(dog)).*(.).*,"lines that have the word ""dog"" or a lower-case letter followed by a character"
+~(([a-z])|([A-Za-z])|(.)),"lines that do not contain a letter, a character, or a lower-case letter"
+((.)|(dog)).*([AEIOUaeiou]).*,lines with character or string 'dog' before vowel
+((dog)|([A-Za-z]))(.*),lines starting with string 'dog' or a letter
+(([0-9])&([A-Za-z])).*([A-Z]).*,lines with a number and letter before a capital letter
+(([A-Za-z])(.*)).*((dog)&([0-9])&(truck)).*,"line with the strings 'dog', and 'truck' or any numbers have a letter before them"
+(\b[0-9].*..*\b)(.*),lines starting with words with number followed by character
+(([A-Z])+).*([A-Za-z]).*,lines with a capital letter before a letter
+(([a-z])&(.)).*([A-Za-z]).*,lines with a lower-case letter and character before letter
+.*([a-z])|([A-Z])|([0-9]).*,"lines which are containing either a lower-case letter, a capital letter, or a number"
+(([AEIOUaeiou])(.*))|(.*dog.*),lines starting in a vowel or with string 'dog'
+((dog)&(.)&(truck)).*(ring).*,"lines which contain the string 'dog', a character, and the strings 'truck' followed by 'ring'"
+(~([a-z]))&([0-9].*dog.*),lines without a lower-case letter and number before string 'dog'
+((.*[AEIOUaeiou].*)+).*([A-Za-z]).*,lines with a vowel before letter
+\b(dog)|([A-Z])|([0-9])\b,"word lines which contain any one of three elements, which are the string 'dog', a number or an upper-case letter"
+((dog)&(.)&(truck)).*([A-Za-z]).*,"lines with a letter preceded by the string 'dog, a character and the string 'truck'"
+((dog)&(.)&(truck)).*([A-Za-z]).*,"lines with the string 'dog' and 'truck', and character before a letter"
+([a-z]).*(([0-9])|([A-Z])).*,lines with a lower-case letter before a number or capital letter
+(([a-z])|([0-9])).*(..*dog.*).*,lower case letter or number before a character with the 'dog' string
+((dog)|([0-9]))*,Items with 'dog' or numeral.
+(.*dog.*).*(([AEIOUaeiou])|([a-z])).*,lines with the string 'dog' before a vowel or a lower-case letter
+"((dog)|([0-9])){2,}","Lines with the string 'dog' or number, two or more times"
+(.*dog.*).*((.)+).*,lines containing string 'dog' before character at least once
+((~([A-Z]))|([a-z]))(.*),lines which are starting with not a capital letter or a lower-case letter
+"((.)|(([0-9])(.*))){6,}","lines with character or starting with number, 6 or more times"
+(.*)(((dog)&([AEIOUaeiou]))|(.)),lines ending with string 'dog' and vowel or character
+"(.).*(([0-9]){2,}).*","lines with character before number, 2 or more times"
+~(([0-9].*[A-Z].*)|([a-z])),lines without a number before a capital or lower-case letter
+~((dog)&([A-Za-z])&([A-Z])),"lines without 'dog', a letter, or a capital letter"
+\b(.*)(.*[AEIOUaeiou].*)\b,lines containing a vowel
+"(([0-9]){7,}).*(dog).*",number-containing lines seen at least 7 times or more which are present prior to the 'dog' string
+((.)|([A-Za-z]))+,Items with a letter or a character at least one time.
+([0-9]).*(~(.)).*,lines where a number doesn't come before a character
+((dog)|(truck)|([A-Za-z])).*([AEIOUaeiou]).*,"lines with a vowel after either the string 'dog', the string 'truck', or a letter"
+\b([AEIOUaeiou])|([A-Z])|(.)\b,"lines with words and a vowel, capital letter, or character"
+~([A-Za-z].*[0-9].*),lines without a letter before a number
+((dog)+).*((.)&([AEIOUaeiou])).*,Lines with the string 'dog' at least one time before a character and vowel
+(((dog).*(truck).*)|([0-9]))*,lines with zero or more strings 'dog' before 'truck'
+"((dog){4,}).*(.).*","lines with string 'dog', 4 or more times before character"
+"(([a-z]){2,})|([AEIOUaeiou].*[0-9].*)","lines with lower-case letter, 2 or more times or vowel followed by number"
+((.)&([A-Z])&(dog)).*([0-9]).*,"lines having a character, capital letter, and string 'dog' before number"
+"([a-z]).*((.){7,}).*","lines with lower-case letter before character, 7 or more times"
+((dog)*)&(([A-Za-z])(.*)),lines with 'dog' that start with a letter
+([AEIOUaeiou]).*((dog)|(.)).*,lines with a vowel before string 'dog' or character
+((.*..*)*).*([AEIOUaeiou]).*,"lines with or without a character, followed by a vowel"
+((.)+)&(.*[AEIOUaeiou].*),lines containing a vowel and at least one character
+"((dog){4,}).*([A-Z]).*",lines in which the 'dog' string appears at least 4 times or greater and also comes before a capital letter
+"([a-z]){7,}",lines containing 7 lower-case letters
+"([0-9]).*(([A-Za-z]){2,}).*","Items with a numeral preceding a letter, at least twice."
+.*([A-Za-z])|(.)|(dog).*,"lines with a letter, character, or a 'dog' string"
+~(([a-z])|(dog)|(.)),"lines do not contain a lower-case letter, the string 'dog', or a character"
+\b((.*)(dog))+\b,lines that have words and end with the string 'dog' one or more times
+~(\b(dog)&(.)\b),lines without words or characters and string 'dog'
+"(([A-Z])|([AEIOUaeiou])){5,}",lines with 5 or more capital letters or vowels
+"((~([A-Za-z]))|(dog)){6,}","lines not having a letter or string 'dog', 6 or more times"
+([A-Z]).*(([A-Za-z])|([AEIOUaeiou])|(dog)).*,"lines with a capital letter, a vowel, or 'dog'"
+"~(((.)(.*)){4,})",lines not starting with a character 4 times
+(([AEIOUaeiou])|([A-Z])).*(dog).*,lines containing a vowel or capital letter followed by the string 'dog'
+"((dog){3,})&((truck)|(.)|(ring))",lines with 3 or more of the string 'dog' with string 'truck' or 'ring' or a character
+"([A-Z].*[a-z].*){3,}","lines with a capital letter followed by a lower-case letter, 3 or more times in them"
+"\b((dog){3,})|(truck)\b","lines that contain the string 'truck' or the string 'dog', at least three times"
+"((dog){3,})&((.*)(.))","lines containing string 'dog', 3 or more times and which end with a character"
+\b(.)&([A-Za-z])&(dog)\b,"lines that have words that have a letter and a character, and also the 'dog' string"
+([A-Za-z]).*(~(.)).*,"Lines with letter before, not with a character."
+(([0-9])|([A-Za-z])).*([a-z]).*,Items with a numeral or letter before a small letter.
+(([A-Z])|([AEIOUaeiou])).*([0-9]).*,"lines with a capital letter or a vowel, followed by a number"
+~(dog.*..*),Items without 'dog' preceding a character.
+(([A-Z])|(dog)).*(.).*,lines consisting of a capital letter or the word 'dog' preceding a character
+\b(dog)&([AEIOUaeiou])&([0-9])\b,"lines with words including 'dog', a number and a vowel"
+(.*[0-9].*)&((dog).*(.).*),lines with a number and string 'dog' before a character
+(dog).*((truck)|([AEIOUaeiou])).*,"lines with ""dog"" before ""truck"" or a vowel"
+(~([AEIOUaeiou]))|([A-Z].*..*),lines with no vowel or capital letter followed by a character
+"(([AEIOUaeiou])|(.)){6,}","lines with vowel or character, 6 or more times"
+(\b[A-Z].*dog.*\b).*(truck).*,lines with words and a capital letter before string 'dog' then 'truck'
+(\b([0-9])+\b)(.*),lines starting with words with a number
+(.*)(\b([A-Z])|([AEIOUaeiou])\b),lines that end with a capital letter or a vowel
+"((.){3,}).*([A-Z]).*","lines that contain a character followed by a capital letter, at least 3 times"
+"(\b([A-Za-z]).*([0-9]).*\b){5,}",lines with 5 or more words before a number
+((dog)|(truck)|(ring)).*([a-z]).*,"lines that have the word ""dog"", ""truck"", or a lower case letter followed by ""ring"""
+"(([a-z])(.*)){2,}",lines that have a lower-case letter at the beginning 2 or more times
+([a-z].*..*).*([AEIOUaeiou]).*,lines with a vowel after a lower-case letter followed by a character
+\b([A-Z]).*([AEIOUaeiou]).*\b,Lines with a capital letter before a vowel.
+.*([0-9])|(dog)|([A-Z]).*,"lines containing either a number, the string 'dog', or a capital letter in it"
+\b[A-Za-z].*dog.*\b,START LINES WITH A LETTER THAN THE STRING' DOG '
+((.*)([AEIOUaeiou])).*((dog)|([a-z])|(truck)).*,"lines ending with the string 'dog', a lower-case letter, or the string 'truck' after a vowel"
+\b([AEIOUaeiou])&([A-Za-z])\b,lines that have words containing a vowel and a letter
+~(([0-9])|(dog)|(truck)),"Lines without a number , the string 'dog' or 'truck'"
+.*(dog)&([a-z])&(.).*,"lines containing string 'dog', lower-case letter, and character"
+(([A-Za-z])&(.)&(dog)).*(truck).*,"lines having a letter, character, and string 'dog' before string 'truck'"
+.*((dog)+).*(.).*.*,lines with the string 'dog'
+"((dog){7,})&(([A-Za-z]).*([a-z]).*)",lines with 7 or more 'dog' and a letter before a lower-case letter
+((.)|([AEIOUaeiou])).*(([A-Za-z])|(dog)|([A-Z])).*,"lines with a character, vowel, the string 'dog' and a capital letter"
+\b(.)|((dog).*(truck).*)\b,lines with words with a character or string 'dog' before the string 'truck'
+"([AEIOUaeiou]).*(([A-Z]){2,}).*",liens with 2 or more of a vowel before capital letter
+"(.*[a-z].*){6,}",lines containing 6 or more lower-case letters
+"([A-Z].*[AEIOUaeiou].*){3,}",lines wherein an uppercase letter is followed by a vowel 3 or more times
+(dog).*(([a-z])|([AEIOUaeiou])|([0-9])).*,"lines containing either a lower-case letter, a vowel, or a number after the string 'dog'"
+(dog).*((.)|(truck)|([AEIOUaeiou])).*,"lines with a character, a vowel, or the string 'truck' before the string 'dog'"
+([AEIOUaeiou]).*(([a-z])+).*,lines with a lower-case after a vowel 1 or more times
+.*(dog)|([0-9])|(truck).*,"lines containing either string 'dog', number, or string 'truck'"
+((dog)&([AEIOUaeiou])&([a-z])).*([0-9]).*,"lines with the string 'dog', vowel, and lower-case letter before number"
+"(([A-Z])|(dog)){2,}",lines with a capital letter or 'dog' as a string at least twice
+"(([a-z])|([A-Z])){2,}","lines with lower-case letter or a capital, 2 or more times"
+.*(([AEIOUaeiou])|(dog)).*(.).*.*,Lines with a vowel or string 'dog' before a character
+"([AEIOUaeiou].*..*){4,}","lines that contain a vowel followed by a character, at least 4 times"
+"((dog)|([A-Za-z])){2,}",lines with 2 or more of the string 'dog'
+(.*)(((dog)&([a-z])&(truck))|(ring)),"lines which are ending with the string 'dog', a lower-case letter, and the string 'truck' or the string 'ring'"
+~(([A-Z])|(.)|([AEIOUaeiou])),"lines without a capital letter, character, or vowel"
+(([a-z])+)&(~(.)),"lines that do not contain a character but contain a lower-case letter, at least once"
+.*((dog)*)|([A-Za-z]).*,lines with zero or more of the string 'dog' or with a letter
+((.)|([0-9])).*([a-z]).*,A lower-case letter after lines with a character or a number.
+.*([0-9])&(dog)&([A-Z]).*,"Items with 'dog, a numeral, and an upper case letter."
+.*([0-9])&(dog)&([A-Z]).*,"lines with a number, string 'dog', and capital letter"
+"(([a-z])|(dog)){2,}","lines which have a lower-case letter or the string 'dog', 2 or more times"
+([A-Za-z]).*(([a-z])|([0-9])|(dog)).*,"lines with a letter before either a lower-case letter, a number, or the string 'dog' in them"
+(~([a-z])).*([AEIOUaeiou]).*,No lower-case letters in the lines before vowels.
+.*(.)|([0-9])|([a-z]).*,"lines with a character, number, or a lower case-letter"
+"(\b(dog)|(truck)|([A-Za-z])\b){4,}","lines with words with either string 'dog', string 'truck', or letter, 4 or more times"
+(\b(.)&([A-Za-z])\b)+,lines that have at least one character and one letter
+(([a-z])|(dog)|(truck)).*([0-9]).*,"lines having either lower-case letter, string 'dog', or string 'truck' before number"
+"(([A-Z]){2,})|(.*dog.*)",lines with a capital letter 2 times or 'dog'
+~(((dog)+)|([A-Za-z])),lines which are not having the string 'dog' at least once or a letter
+"((.)|([A-Za-z])){7,}","lines with character or letter, 7 or more times"
+"(.*(.){7,}.*).*([A-Za-z]).*",lines with 7 or more characters before a letter
+~(([0-9])|(dog)|([AEIOUaeiou])),"lines that do not contain a number, a vowel, or the string 'dog'"
+((.*)([0-9]))&(dog.*..*),lines ending in a number and string 'dog' before a character
+(dog).*((truck.*..*)+).*,lines containing the string 'dog' following by the string 'truck' before a character once or more times
+((dog)&([a-z])&([AEIOUaeiou])).*(truck).*,"lines with the string 'dog', lower-case letter, and vowel before string 'truck'"
+(.*[0-9].*).*(dog.*[A-Za-z].*).*,lines with a number before string 'dog' then a letter
+(\b(dog)&(truck)\b)+,lines with words and the string 'dog' and 'truck'
+~((dog.*truck.*).*([a-z]).*),lines without the string 'dog' followed by 'truck' before a lower-case letter
+~(.*(.*)([0-9]).*),lines without ending in a number
+".*(.){6,}.*",lines that have a character 6 or more times
+\b(dog)&([AEIOUaeiou])&([a-z])\b,lines containing the word 'dog' along with a vowel and a lower-case letter
+(([A-Za-z])|([A-Z])).*([AEIOUaeiou]).*,lines where a vowel is preceded by a letter or capital letter
+(([A-Z])|(.)|([a-z])).*(dog).*,"before the string 'dog' lines must have either a character, a capital letter or a lower case letter"
+((.)+).*([A-Za-z]).*,lines with a character before a letter
+"(([A-Za-z]){7,}).*(.).*",lines with 7 letters before a character
+(dog).*(([0-9])|(truck)).*,lines with string 'dog' before number or string 'truck'
+"(([A-Za-z]).*(dog).*)&(([A-Z]){3,})","lines with a letter before string 'dog' and a capital, 3 or more times"
+"((dog)|(.*[AEIOUaeiou].*)){5,}","lines with string 'dog' or containing a vowel, 5 or more times"
+(([A-Z])|([AEIOUaeiou])|([0-9])).*(dog).*,"Items with either a vowel, a numeral, or an upper case letter preceding 'dog'."
+(dog).*(~([a-z])).*,lines with the string 'dog' followed by a non-lower-case letter
+~((.)&([a-z])&([0-9])),lines cannot include a character or lower-case letter or number
+\b([a-z])&((dog).*(truck).*)\b,lines that have words with a lower-case letter and the word 'dog' followed by the word 'truck'
+(([0-9])&(dog)).*([a-z]).*,lines containing a number and the string 'dog' followed by a lower-case letter
+~((.*)(dog.*[A-Za-z].*)),lines not ending with string 'dog' followed by letter
+\b([0-9]).*(~(dog)).*\b,lines with words with number before not the string 'dog'
+~(([AEIOUaeiou]).*(([A-Z])*).*),lines without a vowel before a capital letter
+~(([A-Za-z])|(dog)|([a-z])),lines without a letter or string 'dog'
+(.*([a-z])&([A-Z]).*)*,lines containing a lower-case letter zero times
+((dog)+)|((.*)(truck)),lines that contain the string 'dog' at least once or end with the string 'truck'
+(~([AEIOUaeiou]))|((dog)*),lines with zero or less of a vowel or string 'dog'
+(.*([AEIOUaeiou]).*([A-Z]).*.*)+,lines with a vowel before capital letter
+"(([0-9])|([A-Z])){5,}",lines with 5 or more of a number or capital letter
+~((dog)&(.)&([A-Z])),"Items without 'dog', upper case letter, or character."
+([0-9]).*(([A-Z])+).*,A number before a capital letter at least once in the lines.
+~(([a-z])|([0-9])|(dog)),"Lines that dont have lower-case letters, the string dog, or a number"
+~(([a-z])|([0-9])|(dog)),"lines without a lower-case letter, number, or string 'dog'"
+\b([0-9])|(dog)|([A-Za-z])\b,"lines having words with number, string 'dog' and a letter"
+\b(.)|([A-Za-z])|([AEIOUaeiou])\b,"lines containing a letter, a character, or a vowel in words"
+((.*)(dog))+,The lines that end with the string 'dog' occurring at least once
+([a-z]).*(~(dog)).*,lines with a lowercase letter that does not precede the string 'dog'
+~(([AEIOUaeiou])|([A-Za-z])),lines not containing a vowel or a letter
+(([A-Za-z])|([a-z])).*([AEIOUaeiou]).*,lines with a letter or a lower-case letter before a vowel in it
+"([A-Za-z]).*(([A-Z]){6,}).*",lines with 6 or more of a letter before a capital letter
+([AEIOUaeiou]).*(([A-Z])&([a-z])).*,lines with vowel before a capital and a lower-case letter
+\b(~([AEIOUaeiou]))|(.)\b,lines with words without a vowel or character
+((.)(.*))&([a-z].*[A-Za-z].*),lines starting with character and lower-case letter followed by letter
+~((.*)([A-Z])),lines not ending in only capital letter
+~(((dog)+)&(truck)),lines without the string 'dog' or 'truck'
+(([AEIOUaeiou].*[a-z].*)|(dog))*,lines containing a vowel before with or without a lower-case letter or the string 'dog'
+(([AEIOUaeiou])&(dog)&([A-Za-z])).*(truck).*,"lines with a vowel, string 'dog', and letter before string 'truck'"
+(.).*((dog)&([A-Za-z])&([AEIOUaeiou])).*,"lines with the string 'dog', a letter, and a vowel after a character"
+(([0-9])(.*)).*([A-Z]).*,lines starting with a number before capital letter
+(\b([A-Za-z])|([a-z])|([AEIOUaeiou])\b)*,lines with words zero or more of a letter or vowel
+(((dog)&([a-z]))|(truck))*,"lines with string 'dog' and lower-case letter or string 'truck', zero or more times"
+((.)|([AEIOUaeiou]))(.*),lines starting with character or vowel
+([0-9]).*((.)&([A-Za-z])).*,lines with number before character and letter
+(\bdog.*[0-9].*\b)+,lines with words that contain the string 'dog' followed by a number at least once
+~(\b[0-9]\b),lines not having words that contain only a number
+(~(.))&([0-9].*[a-z].*),lines that do not contain a character and a number followed by a lower-case letter
+((dog)|(.)|([AEIOUaeiou])).*([a-z]).*,"lines with the string 'dog', character, or vowel before a lower-case letter"
+\b([a-z])&([A-Za-z])\b,lines in which there's a word containing a small letter plus a letter
+.*([0-9])+.*,lines containing a number at least once in them.
+(([a-z])|([0-9]))*,lines containing a lower-case letter or number
+(([A-Z])|([AEIOUaeiou])|([A-Za-z])).*(dog).*,"Items with a vowel, an upper case letter, or letter preceding 'dog'."
+"([A-Z]).*(([a-z]){5,}).*","Items with an uppe case letter preceding a small letter, at least five times."
+.*([A-Z])|([AEIOUaeiou]).*,lines that have an uppercase letter or a vowel
+dog.*truck.*,lines containing the string 'truck' preceded by the string 'dog'
+(([AEIOUaeiou])|(dog)).*([0-9]).*,Lines with a vowel or 'dog' before a number
+([AEIOUaeiou]).*(~([A-Za-z])).*,Items with a vowel preceding a nonletter.
+([0-9].*[A-Z].*).*(.).*,Items with a numeral preceding an upper case letter preceding a character.
+([AEIOUaeiou]).*((dog)&(truck)&(ring)).*,"The lines containing a vowel before the string 'dog', the string 'truck', or the string 'ring'"
+(dog.*[0-9].*).*([A-Za-z]).*,lines with the string 'dog' before a number then a letter
+\b([a-z])|([A-Za-z])|([A-Z])\b,"lines with words with either a lower-case letter, letter, or capital letter"
+~((([a-z])+)|(.)),lines without a lower-case letter or a character
+\b.*(.)|(dog).*\b,Lines with words and characters or the string 'dog'
+\b([AEIOUaeiou])&([a-z])&([A-Z])\b,"lines that have words that contain a vowel, a capital letter, and a lower-case letter"
+~(([A-Z])|(dog)|([0-9])),"lines without a capital letter, 'dog', or a number"
+(dog).*(~((truck)|(ring))).*,lines with string 'dog' before not the string 'truck' or string 'ring'
+(([A-Za-z])&(dog)).*([a-z]).*,lines with a letter and the string 'dog' before a lower-case letter in them
+(dog).*(([AEIOUaeiou])&([A-Za-z])&([0-9])).*,"lines having the string 'dog' before a vowel or letter, and a number"
+(.*..*)&((dog)&(truck)&(ring)),"lines with a character, the string 'dog', the string 'truck', as well as the string 'ring'"
+~(([a-z]).*((dog)&(truck)).*),lines without a lower-case letter before string 'dog' without string 'truck'
+([AEIOUaeiou]).*((dog)&(.)&(truck)).*,lines with a vowel before the string 'dog' and 'truck' and character
+"(([A-Z])|(dog)){7,}",lines with a capital letter or 7 strings of 'dog'
+(([a-z])+).*([A-Z]).*,lines containing a lower-case letter before a capital letter
+(dog).*(([A-Z])&([A-Za-z])&(truck)).*,"Items with 'dog' preceding an upper case letter, a letter, and 'truck'."
+\bdog.*[a-z].*\b,lines with words with the string 'dog' followed by a lower-case letter in it
+([A-Z]).*(~(.)).*,lines with a character not before a capital letter
+(([A-Z])|([A-Za-z])).*(.).*,lines with capital letter or letter before character
+([A-Za-z]).*(([A-Z])+).*,lines with a letter containing only a capital letter at least once
+\b([0-9].*[A-Z].*).*(dog).*\b,"lines with strings containing a number before a capital letter, before 'dog'"
+\b~((.*)(dog))\b,lines with words ending with string 'dog'
+(.).*([0-9].*[AEIOUaeiou].*).*,lines with character before number followed by vowel
+([A-Za-z]).*((.)&([a-z])).*,lines with letter before character and lower-case letter
+"((.){5,}).*([AEIOUaeiou]).*",lines with a character before a vowel at least 5 times
+"((.*)([A-Za-z].*[a-z].*)){4,}",lines ending with a letter followed by a lower-case letter at least 4 times
+~(.*([A-Z])+.*),lines without a capital letter
+((dog)(.*)).*(.*[A-Z].*).*,lines starting in the string 'dog' before capital letter
+\b([0-9])|([a-z])\b,Items with words containing a small letter or numeral.
+.*(dog)&([a-z])&(truck).*,"Items with 'dog', 'truck', and a small letter."
+\b(dog)&([AEIOUaeiou].*[0-9].*)\b,Items with words containing 'dog' and a vowel preceding a numeral.
+(.*)(\b[A-Z]\b),Items with words that have only an upper case letter.
+(.*..*)&((dog)|(truck)|(ring)),"lines with a character and the string 'dog', the string 'truck', or the string 'ring'"
+"(([AEIOUaeiou])|([A-Za-z])){2,}",Lines with either 2 vowels or letters
+\b([0-9]).*(~([AEIOUaeiou])).*\b,lines with words with number before not a vowel
+"(((dog)(.*))|([a-z])){4,}","lines that begin with the word 'dog' or a lower-case letter, at least four times"
+~(([A-Za-z])&([a-z])&([A-Z])),lines without a letter
+(([AEIOUaeiou])+).*(dog).*,lines with vowel at least once before string 'dog'
+(.*[a-z].*).*((dog)|(truck)).*,lines with a lower case letter followed by the string 'dog' or the string 'truck'
+([AEIOUaeiou]).*(([A-Za-z])|([0-9])).*,lines with vowel before letter or number
+"([A-Z]).*((.){4,}).*",Lines containing a capital letter 4 or more times before a character
+"(([AEIOUaeiou]){4,}).*([A-Z]).*","lines containing 4 or more vowels, and a capital letter"
+.*(.)&(dog)&([0-9]).*,"lines with a character, the string 'dog', and a number"
+\b(.)|([A-Za-z])\b,Items with a letter or a character.
+~(([0-9])(.*)),lines starting without numbers
+"((dog){2,})|(truck.*ring.*)",lines with 2 or more of the string 'dog' or the strings 'truck' before 'ring'
+"((dog)|([0-9])){7,}","lines with the string 'dog' or a number, 7 or more times in them"
+((dog)|(.*[A-Z].*))+,lines with the string 'dog' before a capital letter
+(([0-9])+)&(([A-Z])|(dog)),lines that must have a number and a capital letter or the word 'dog'
+(dog.*[A-Za-z].*).*([a-z]).*,Lines with the string 'dog' followed by a letter before any lower case letter
+"(.*([A-Z])|([a-z]).*){6,}",lines with 6 or more letters
+.*(dog)&(([A-Z])(.*)).*,lines with the string 'dog' and starting in a capital letter
+([A-Z]).*([0-9].*[AEIOUaeiou].*).*,lines with a capital before number followed by vowel
